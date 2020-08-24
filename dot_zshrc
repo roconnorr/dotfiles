@@ -1,0 +1,49 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=~/.local/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/roconnor/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="agnoster"
+
+DEFAULT_USER="roconnor"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Would you like to use another custom folder than $ZSH/custom?
+ZSH_CUSTOM=$HOME/zshcustom
+
+# Only source nvm on the first node command
+export NVM_LAZY_LOAD=true
+
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(
+  git
+  zsh-nvm
+  osx
+  sublime
+  sublime-merge
+  zsh-autosuggestions
+  safe-paste
+)
+
+source $ZSH/oh-my-zsh.sh
