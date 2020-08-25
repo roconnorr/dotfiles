@@ -1,12 +1,9 @@
 #!/bin/bash
+# script to set up a new macos machine
 
-# set up a new machine
-# todo: install hammerspoon
-
-# homebrew
-which -s brew
-if [[ $? != 0 ]] ; then
-    # Install Homebrew
+# Install Homebrew
+if ! which -s brew;
+then
     echo "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 else
@@ -21,12 +18,16 @@ chezmoi apply
 # install homebrew packages
 brew bundle install
 
-# check if its installed already
-echo "Installing oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
-# remove template
-rm .zshrc.pre-oh-my-zsh
-chezmoi apply
+# install oh-my-zsh
+OMZDIR=~/.oh-my-zsh
+if [ -d "$OMZDIR" ]; then
+    echo "oh-my-zsh is already installed"
+else 
+    echo "oh-my-zsh not installed - installing"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    # remove template file
+    rm .zshrc.pre-oh-my-zsh
+    chezmoi apply
+fi
 
 source ~/.zshrc

@@ -89,6 +89,8 @@ brew "ruby"
 brew "screenfetch"
 # Database of common MIME types
 brew "shared-mime-info"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # SOcket CAT: netcat on steroids
 brew "socat"
 # Tool to create intelligent and beautiful documentation
@@ -114,6 +116,7 @@ cask "dbeaver-community"
 cask "eloston-chromium"
 cask "flipper"
 cask "godot"
+cask "hammerspoon"
 cask "insomnia"
 cask "joplin"
 cask "keepassxc"
