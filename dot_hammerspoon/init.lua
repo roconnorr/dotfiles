@@ -1,10 +1,6 @@
 hs.loadSpoon('SpeedMenu')
--- hs.loadSpoon('WindowGrid')
--- hs.loadSpoon('WinWin')
 
 spoon.SpeedMenu:start()
--- spoon.WindowGrid:start()
--- spoon.WinWin:start()
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Left", function()
   local win = hs.window.focusedWindow()
@@ -45,16 +41,32 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Up", function()
   win:setFrame(f)
 end)
 
-function moveWindowToDisplay(d)
+function moveWindowToDisplay(direction)
   return function()
-    local displays = hs.screen.allScreens()
+    -- get the focused window
     local win = hs.window.focusedWindow()
-    win:moveToScreen(displays[d], false, true)
+    -- get the screen where the focused window is displayed, a.k.a. current screen
+    local screen = win:screen()
+    -- compute the unitRect of the focused window relative to the current screen
+    -- and move the window to the next screen setting the same unitRect
+    if direction == 'left' then
+      win:move(win:frame():toUnitRect(screen:frame()), screen:previous(), true, 0)
+    else
+      win:move(win:frame():toUnitRect(screen:frame()), screen:next(), true, 0)
+    end
   end
 end
 
-hs.hotkey.bind({"ctrl", "alt", "cmd"}, "p", moveWindowToDisplay(1))
-hs.hotkey.bind({"ctrl", "alt", "cmd"}, "o", moveWindowToDisplay(2))
+-- function moveWindowToDisplay(d)
+--   return function()
+--     local displays = hs.screen.allScreens()
+--     local win = hs.window.focusedWindow()
+--     win:moveToScreen(displays[d], false, true)
+--   end
+-- end
+
+hs.hotkey.bind({"ctrl", "alt", "cmd"}, "p", moveWindowToDisplay('left'))
+hs.hotkey.bind({"ctrl", "alt", "cmd"}, "o", moveWindowToDisplay('right'))
 -- hs.hotkey.bind({"ctrl", "alt", "cmd"}, "3", moveWindowToDisplay(3))
 
 -- caffeine = hs.menubar.new()

@@ -11,6 +11,8 @@ brew "openssl@1.1"
 brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8", link: false
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Core application library for C
@@ -31,18 +33,20 @@ brew "cmatrix"
 brew "coreutils", link: false
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
-# Generate introspection data for GObject libraries
-brew "gobject-introspection"
 # GSettings schemas for desktop components
 brew "gsettings-desktop-schemas"
-# OpenType text shaping engine
-brew "harfbuzz"
 # Framework for layout and rendering of i18n text
 brew "pango"
 # Toolkit for creating graphical user interfaces
@@ -61,14 +65,20 @@ brew "jq"
 brew "lazydocker"
 # GNOME XML library
 brew "libxml2"
+# Open source relational database management system
+brew "mysql-client"
 # NCurses Disk Usage
 brew "ncdu"
 # Port scanning utility for large networks
 brew "nmap"
+# General-purpose scripting language
+brew "php"
 # Implementation of Telnet and SSH
 brew "putty"
 # GTK+ bindings for Python
 brew "pygtk"
+# Ruby version manager
+brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Utility that provides fast incremental file transfer
@@ -95,14 +105,21 @@ brew "wget"
 brew "youtube-dl"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+cask "adoptopenjdk"
 cask "basictex"
 cask "beaker-browser"
 cask "borgbackup"
+cask "db-browser-for-sqlite"
+cask "dbeaver-community"
 cask "eloston-chromium"
+cask "flipper"
 cask "godot"
 cask "insomnia"
 cask "joplin"
+cask "keepassxc"
 cask "lulu"
 cask "react-native-debugger"
 cask "reactotron"
+cask "vagrant"
 cask "vscodium"
+cask "zoomus"

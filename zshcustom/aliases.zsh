@@ -2,9 +2,6 @@
 # Shell Aliases
 # -----------------------------------------------------
 
-# dotfiles management
-alias config='/usr/bin/git --git-dir=/Users/roconnor/.dotfiles/ --work-tree=/Users/roconnor'
-
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 
@@ -39,6 +36,7 @@ alias sls='screen -ls'
 alias rc='code ~/.zshrc'
 alias sreload='source ~/.zshrc'
 alias o='open'
+alias cz='chezmoi'
 
 ## Pipe Aliases (Global)
 alias -g L='|less'
@@ -48,8 +46,6 @@ alias -g H='|head'
 alias -g W='|wc -l'
 alias -g S='|sort'
 
-# docker
-alias dps="docker ps -a"
-alias dcup="docker-compose up"
-alias dcstop="docker-compose stop"
-alias dcrm="docker-compose rm"
+# Random
+alias ytmp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --embed-thumbnail --add-metadata "
+alias shrug="echo '¯\_(ツ)_/¯'"
