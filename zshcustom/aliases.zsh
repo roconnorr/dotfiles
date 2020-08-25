@@ -33,10 +33,12 @@ alias c=clear
 alias s=screen
 alias sr='screen -R'
 alias sls='screen -ls'
-alias rc='code ~/.zshrc'
 alias sreload='source ~/.zshrc'
 alias o='open'
 alias cz='chezmoi'
+alias rc='chezmoi cd && code .'
+alias dots='chezmoi cd'
+alias cza='chezmoi apply -v'
 
 ## Pipe Aliases (Global)
 alias -g L='|less'
