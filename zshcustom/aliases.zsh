@@ -38,7 +38,7 @@ alias o='open'
 alias cz='chezmoi'
 alias rc='chezmoi cd && code .'
 alias dots='chezmoi cd'
-alias cza='chezmoi apply -v'
+alias cza='chezmoi apply -v && source ~/.zshrc'
 
 ## Pipe Aliases (Global)
 alias -g L='|less'
