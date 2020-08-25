@@ -36,7 +36,7 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$HOME/zshcustom
+ZSH_CUSTOM=$HOME/.zshcustom
 
 # Only source nvm on the first node command
 export NVM_LAZY_LOAD=true
