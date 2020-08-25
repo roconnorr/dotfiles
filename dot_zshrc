@@ -40,6 +40,8 @@ ZSH_CUSTOM=$HOME/.zshcustom
 
 # Only source nvm on the first node command
 export NVM_LAZY_LOAD=true
+# Extra commands to trigger nvm load
+# export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim')
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
