@@ -1,5 +1,7 @@
+tap "facebook/fb"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 # YAML Parser
@@ -100,11 +102,16 @@ brew "watchman"
 brew "weechat"
 # Internet file retriever
 brew "wget"
+# JavaScript package manager
+brew "yarn"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# A Powerful Command Line for automating iOS Simulators
+brew "facebook/fb/idb-companion", link: false
 cask "adoptopenjdk"
+cask "android-studio"
 cask "basictex"
 cask "beaker-browser"
 cask "db-browser-for-sqlite"
@@ -114,10 +121,14 @@ cask "flipper"
 cask "godot"
 cask "hammerspoon"
 cask "insomnia"
+cask "iterm2"
 cask "joplin"
 cask "keepassxc"
 cask "react-native-debugger"
 cask "reactotron"
+cask "slack"
+cask "sublime-merge"
+cask "sublime-text"
 cask "vagrant"
 cask "vscodium"
 cask "zoomus"
