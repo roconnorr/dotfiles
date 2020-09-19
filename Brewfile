@@ -22,8 +22,6 @@ brew "glib"
 brew "automake"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
-# Deduplicating archiver with compression and authenticated encryption
-brew "borgbackup"
 # Manage your dotfiles across multiple machines, securely
 brew "chezmoi"
 # Cross-platform make
@@ -58,8 +56,14 @@ brew "gtk-mac-integration"
 brew "htop"
 # Website copier/offline browser
 brew "httrack"
+# Database of common MIME types
+brew "shared-mime-info"
 # Tool to measure maximum TCP and UDP bandwidth
 brew "iperf"
+# GNOME XML library
+brew "libxml2"
+# Note taking and to-do application with synchronisation capabilities
+brew "joplin", link: false
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # The lazier way to manage everything docker
@@ -86,8 +90,6 @@ brew "rsync"
 brew "ruby"
 # Generate ASCII art with terminal, shell, and OS info
 brew "screenfetch"
-# Database of common MIME types
-brew "shared-mime-info"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # SOcket CAT: netcat on steroids
@@ -116,14 +118,21 @@ cask "basictex"
 cask "beaker-browser"
 cask "db-browser-for-sqlite"
 cask "dbeaver-community"
+cask "discord"
+cask "docker"
+cask "dropbox"
+cask "electrum"
 cask "eloston-chromium"
 cask "flipper"
 cask "godot"
+cask "grandperspective"
 cask "hammerspoon"
+cask "iina"
 cask "insomnia"
 cask "iterm2"
 cask "joplin"
 cask "keepassxc"
+cask "lulu"
 cask "react-native-debugger"
 cask "reactotron"
 cask "slack"
@@ -131,4 +140,5 @@ cask "sublime-merge"
 cask "sublime-text"
 cask "vagrant"
 cask "vscodium"
+cask "xee"
 cask "zoomus"
