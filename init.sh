@@ -12,6 +12,7 @@ fi
 
 echo "init chezmoi"
 brew install chezmoi
+# todo: point this repo at ssh instead of https
 chezmoi init https://github.com/roconnorr/dotfiles.git
 chezmoi apply
 
@@ -29,5 +30,8 @@ else
     rm .zshrc.pre-oh-my-zsh
     chezmoi apply
 fi
+
+# fix shell completion permissions
+compaudit | xargs chmod g-w,o-w
 
 source ~/.zshrc
