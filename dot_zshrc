@@ -10,6 +10,7 @@ path+=('$HOME/.rbenv/bin')
 eval "$(rbenv init - zsh)"
 
 path+=("$HOME/Library/Android/sdk/platform-tools")
+path+=("$HOME/Library/Android/sdk/emulator")
 export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_AVD_HOME=~/.android/avd
