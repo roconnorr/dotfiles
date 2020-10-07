@@ -16,6 +16,8 @@ alias dcrm="docker-compose rm"
 alias nfresh="rm -rf node_modules/ && npm install"
 alias ns="npm start"
 alias nis="npm i && npm start"
+alias ys="yarn start"
+alias yis="yarn && yarn start"
 
 #############################################
 #
@@ -30,6 +32,8 @@ alias pixel='~/Library/Android/sdk/emulator/emulator -avd Pixel_2_API_29'
 alias tab='~/Library/Android/sdk/emulator/emulator -avd Pixel_C_API_28'
 alias reloadandroid='adb shell input text "RR"'
 alias devmenuandroid='adb shell input keyevent 82'
+alias iosrecord="xcrun simctl io booted recordVideo"
+alias podi="cd ios && pod install && cd .."
 
 #############################################
 #
