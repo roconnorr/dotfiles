@@ -34,4 +34,9 @@ fi
 # fix shell completion permissions
 compaudit | xargs chmod g-w,o-w
 
+# apple tweaks
+# Show appswitcher on all displays
+defaults write com.apple.Dock appswitcher-all-displays -bool true
+killall Dock
+
 source ~/.zshrc
