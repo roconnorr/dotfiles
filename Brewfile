@@ -42,6 +42,10 @@ brew "ffmpeg"
 brew "fzf"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
+# GitHub command-line tool
+brew "gh"
+# GIF image/animation creator/editor
+brew "gifsicle"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # GSettings schemas for desktop components
@@ -60,13 +64,9 @@ brew "httrack"
 brew "shared-mime-info"
 # Tool to measure maximum TCP and UDP bandwidth
 brew "iperf"
-# GNOME XML library
-brew "libxml2"
-# Note taking and to-do application with synchronisation capabilities
-brew "joplin", link: false
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# The lazier way to manage everything docker
+# Lazier way to manage everything docker
 brew "lazydocker"
 # GNOME XML library
 brew "libxml2"
@@ -111,7 +111,7 @@ brew "youtube-dl"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
 # A Powerful Command Line for automating iOS Simulators
-brew "facebook/fb/idb-companion", link: false
+brew "facebook/fb/idb-companion"
 cask "adoptopenjdk"
 cask "android-studio"
 cask "basictex"
@@ -130,6 +130,8 @@ cask "hammerspoon"
 cask "iina"
 cask "insomnia"
 cask "iterm2"
+cask "joplin"
+cask "kap"
 cask "keepassxc"
 cask "lulu"
 cask "react-native-debugger"

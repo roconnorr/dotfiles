@@ -1,12 +1,14 @@
-path+=("$HOME/Library/Library/Python/3.8/bin")
+path+=("$HOME/Library/Python/3.8/bin")
 path+=('/usr/local/opt/php@7.4/bin')
 path+=('/usr/local/opt/php@7.4/sbin')
 path+=("$HOME/.cargo/bin")
 
 path+=('/usr/local/opt/mysql-client/bin')
 
+path+=("$HOME/.zshcustom/shellscripts")
+
 # init rbenv
-path+=('$HOME/.rbenv/bin')
+path+=("$HOME/.rbenv/bin")
 eval "$(rbenv init - zsh)"
 
 path+=("$HOME/Library/Android/sdk/platform-tools")
