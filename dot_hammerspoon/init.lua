@@ -2,6 +2,24 @@ hs.loadSpoon('SpeedMenu')
 
 spoon.SpeedMenu:start()
 
+detectLogiMouseExtraButtons = hs.eventtap.new({
+  hs.eventtap.event.types.otherMouseDown,
+}, function(e)
+  local button = e:getProperty(
+      hs.eventtap.event.properties['mouseEventButtonNumber']
+  )
+
+  -- if button == 2 then print('middle click')
+
+  -- rear extra button
+  if button == 3 then hs.application.launchOrFocus("LaunchPad.app")
+  -- front extra button
+  elseif button == 4 then hs.application.launchOrFocus("Mission Control.app")
+  end
+end)
+
+detectLogiMouseExtraButtons:start()
+
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Left", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
