@@ -1,4 +1,5 @@
 tap "facebook/fb"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
@@ -13,7 +14,7 @@ brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.8", link: false
+brew "python@3.8"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Core application library for C
@@ -32,10 +33,14 @@ brew "cmatrix"
 brew "coreutils", link: false
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Secure Reliable Transport
+brew "srt"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
@@ -62,12 +67,18 @@ brew "htop"
 brew "httrack"
 # Database of common MIME types
 brew "shared-mime-info"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # Tool to measure maximum TCP and UDP bandwidth
 brew "iperf"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Lazier way to manage everything docker
 brew "lazydocker"
+# Postgres C API library
+brew "libpq"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # GNOME XML library
 brew "libxml2"
 # Open source relational database management system
@@ -78,6 +89,10 @@ brew "ncdu"
 brew "nmap"
 # General-purpose scripting language
 brew "php"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Object-relational database system
+brew "postgresql"
 # Implementation of Telnet and SSH
 brew "putty"
 # Ruby version manager
@@ -98,6 +113,8 @@ brew "socat"
 brew "sphinx-doc"
 # Terminal multiplexer
 brew "tmux"
+# Image processing library
+brew "vips"
 # Watch files and take action when they change
 brew "watchman"
 # Extensible IRC client
@@ -112,6 +129,8 @@ brew "youtube-dl"
 brew "zsh-syntax-highlighting"
 # A Powerful Command Line for automating iOS Simulators
 brew "facebook/fb/idb-companion"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 cask "adoptopenjdk"
 cask "android-studio"
 cask "basictex"
@@ -134,6 +153,7 @@ cask "joplin"
 cask "kap"
 cask "keepassxc"
 cask "lulu"
+cask "notion"
 cask "react-native-debugger"
 cask "reactotron"
 cask "slack"
