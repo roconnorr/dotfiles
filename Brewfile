@@ -13,17 +13,19 @@ brew "openssl@1.1"
 brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Core application library for C
 brew "glib"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
-# Manage your dotfiles across multiple machines, securely
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # Cross-platform make
 brew "cmake"
@@ -33,14 +35,22 @@ brew "cmatrix"
 brew "coreutils", link: false
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl-openssl"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
+# Functional metaprogramming aware language built on Erlang VM
+brew "elixir"
+# Modern replacement for 'ls'
+brew "exa"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
 # OpenType text shaping engine
 brew "harfbuzz"
-# Secure Reliable Transport
-brew "srt"
+# Subtitle renderer for the ASS/SSA subtitle format
+brew "libass"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
@@ -49,8 +59,6 @@ brew "fzf"
 brew "gdk-pixbuf"
 # GitHub command-line tool
 brew "gh"
-# GIF image/animation creator/editor
-brew "gifsicle"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # GSettings schemas for desktop components
@@ -77,8 +85,6 @@ brew "jq"
 brew "lazydocker"
 # Postgres C API library
 brew "libpq"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # GNOME XML library
 brew "libxml2"
 # Open source relational database management system
@@ -89,6 +95,8 @@ brew "ncdu"
 brew "nmap"
 # General-purpose scripting language
 brew "php"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
@@ -132,6 +140,7 @@ brew "facebook/fb/idb-companion"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 cask "adoptopenjdk"
+cask "alacritty"
 cask "android-studio"
 cask "basictex"
 cask "beaker-browser"
@@ -153,7 +162,7 @@ cask "joplin"
 cask "kap"
 cask "keepassxc"
 cask "lulu"
-cask "notion"
+cask "pusher"
 cask "react-native-debugger"
 cask "reactotron"
 cask "slack"

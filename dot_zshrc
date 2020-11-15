@@ -1,4 +1,5 @@
 path+=("$HOME/Library/Python/3.8/bin")
+path+=("$HOME/.local/bin")
 path+=('/usr/local/opt/php@7.4/bin')
 path+=('/usr/local/opt/php@7.4/sbin')
 path+=("$HOME/.cargo/bin")
