@@ -51,6 +51,8 @@ brew "gobject-introspection"
 brew "harfbuzz"
 # Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
+# Secure Reliable Transport
+brew "srt"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
@@ -85,8 +87,12 @@ brew "jq"
 brew "lazydocker"
 # Postgres C API library
 brew "libpq"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # GNOME XML library
 brew "libxml2"
+# Intercept, modify, replay, save HTTP/S traffic
+brew "mitmproxy"
 # Open source relational database management system
 brew "mysql-client"
 # NCurses Disk Usage
@@ -103,6 +109,8 @@ brew "poppler"
 brew "postgresql"
 # Implementation of Telnet and SSH
 brew "putty"
+# Install various Ruby versions and implementations
+brew "ruby-build"
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
@@ -166,8 +174,10 @@ cask "pusher"
 cask "react-native-debugger"
 cask "reactotron"
 cask "slack"
+cask "spotify"
 cask "sublime-merge"
 cask "sublime-text"
+cask "typora"
 cask "vagrant"
 cask "vscodium"
 cask "xee"
