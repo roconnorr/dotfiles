@@ -5,16 +5,10 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-# YAML Parser
-brew "libyaml"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Library for command-line editing
 brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
-# Automate deployment, configuration, and upgrading
-brew "ansible"
 # Core application library for C
 brew "glib"
 # Interpreted, interactive, object-oriented programming language
@@ -35,6 +29,10 @@ brew "cmatrix"
 brew "coreutils", link: false
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Open source suite of directory software
+brew "openldap"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Functional metaprogramming aware language built on Erlang VM
@@ -47,10 +45,12 @@ brew "unbound"
 brew "gobject-introspection"
 # OpenType text shaping engine
 brew "harfbuzz"
-# Secure Reliable Transport
-brew "srt"
+# Subtitle renderer for the ASS/SSA subtitle format
+brew "libass"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# High performance message passing library
+brew "open-mpi"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Toolkit for image loading and pixel buffer manipulation
@@ -58,11 +58,15 @@ brew "gdk-pixbuf"
 # GitHub command-line tool
 brew "gh"
 # GNU Pretty Good Privacy (PGP) package
-brew "gnupg", link: false
+brew "gnupg"
+# Next generation open source RPC library and framework
+brew "grpc"
 # GSettings schemas for desktop components
 brew "gsettings-desktop-schemas"
 # Framework for layout and rendering of i18n text
 brew "pango"
+# GUI toolkit
+brew "gtk+"
 # Toolkit for creating graphical user interfaces
 brew "gtk+3"
 # Integrates GTK macOS applications with the Mac desktop
@@ -73,12 +77,16 @@ brew "htop"
 brew "httrack"
 # Database of common MIME types
 brew "shared-mime-info"
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+brew "libheif"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Tool to measure maximum TCP and UDP bandwidth
 brew "iperf"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Network authentication protocol
+brew "krb5"
 # Lazier way to manage everything docker
 brew "lazydocker"
 # Postgres C API library
@@ -87,8 +95,12 @@ brew "libpq"
 brew "librsvg"
 # GNOME XML library
 brew "libxml2"
+# YAML Parser
+brew "libyaml"
 # Intercept, modify, replay, save HTTP/S traffic
 brew "mitmproxy"
+# Remote terminal application
+brew "mosh"
 # Open source relational database management system
 brew "mysql-client"
 # NCurses Disk Usage
@@ -154,10 +166,14 @@ cask "alacritty"
 cask "amethyst"
 # Tools for building Android applications
 cask "android-studio"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
 # Experimental peer-to-peer web browser
 cask "beaker-browser"
+# E-books management software
+cask "calibre"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Free universal database tool and SQL client
@@ -194,6 +210,8 @@ cask "kap"
 cask "keepassxc"
 # Open-source firewall to block unknown outgoing connections
 cask "lulu"
+# Controls and monitors all fans on Apple computers
+cask "macs-fan-control"
 cask "pusher"
 cask "react-native-debugger"
 # Desktop app for inspecting React JS and React Native projects
@@ -206,10 +224,6 @@ cask "spotify"
 cask "sublime-merge"
 # Text editor for code, markup and prose
 cask "sublime-text"
-# Configurable document editor that supports Markdown
-cask "typora"
-# Development environment
-cask "vagrant"
 # Binary releases of VS Code without MS branding/telemetry/licensing
 cask "vscodium"
 # Image viewer and file browser
