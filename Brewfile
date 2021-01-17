@@ -62,7 +62,7 @@ brew "gdk-pixbuf"
 # GitHub command-line tool
 brew "gh"
 # GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
+brew "gnupg", link: false
 # GSettings schemas for desktop components
 brew "gsettings-desktop-schemas"
 # Framework for layout and rendering of i18n text
@@ -97,6 +97,8 @@ brew "mitmproxy"
 brew "mysql-client"
 # NCurses Disk Usage
 brew "ncdu"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
 # General-purpose scripting language
@@ -161,6 +163,7 @@ cask "electrum"
 cask "eloston-chromium"
 cask "flipper"
 cask "godot"
+cask "gpg-suite"
 cask "grandperspective"
 cask "hammerspoon"
 cask "iina"
@@ -181,4 +184,4 @@ cask "typora"
 cask "vagrant"
 cask "vscodium"
 cask "xee"
-cask "zoomus"
+cask "zoom"
