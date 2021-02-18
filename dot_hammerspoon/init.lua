@@ -1,6 +1,6 @@
 hs.loadSpoon('SpeedMenu')
 
-spoon.SpeedMenu:start()
+-- spoon.SpeedMenu:start()
 
 detectLogiMouseExtraButtons = hs.eventtap.new({
   hs.eventtap.event.types.otherMouseDown,

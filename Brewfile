@@ -35,8 +35,6 @@ brew "cmatrix"
 brew "coreutils", link: false
 # Configurable talking characters in ASCII art
 brew "cowsay"
-# Get a file from an HTTP, HTTPS or FTP server
-brew "curl-openssl"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Functional metaprogramming aware language built on Erlang VM
@@ -49,8 +47,6 @@ brew "unbound"
 brew "gobject-introspection"
 # OpenType text shaping engine
 brew "harfbuzz"
-# Subtitle renderer for the ASS/SSA subtitle format
-brew "libass"
 # Secure Reliable Transport
 brew "srt"
 # Play, record, convert, and stream audio and video
@@ -133,6 +129,8 @@ brew "sphinx-doc"
 brew "tmux"
 # Image processing library
 brew "vips"
+# 🚀 The Universal WebAssembly Runtime
+brew "wasmer"
 # Watch files and take action when they change
 brew "watchman"
 # Extensible IRC client
@@ -150,38 +148,71 @@ brew "facebook/fb/idb-companion"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 cask "adoptopenjdk"
+# GPU-accelerated terminal emulator
 cask "alacritty"
+# Automatic tiling window manager similar to xmonad
+cask "amethyst"
+# Tools for building Android applications
 cask "android-studio"
+# Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
+# Experimental peer-to-peer web browser
 cask "beaker-browser"
+# Browser for SQLite databases
 cask "db-browser-for-sqlite"
+# Free universal database tool and SQL client
 cask "dbeaver-community"
+# Voice and text chat software
 cask "discord"
+# App to build and share containerized applications and microservices
 cask "docker"
+# Client for the Dropbox cloud storage service
 cask "dropbox"
+# Bitcoin thin client
 cask "electrum"
 cask "eloston-chromium"
+# Desktop debugging platform for mobile developers
 cask "flipper"
 cask "godot"
+# Tools to protect your emails and files
 cask "gpg-suite"
+# Graphically shows disk usage within a file system
 cask "grandperspective"
+# Desktop automation application
 cask "hammerspoon"
+# Free and open-source media player
 cask "iina"
+# HTTP and GraphQL Client
 cask "insomnia"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Note taking and to-do application with synchronization capabilities
 cask "joplin"
+# Open-source screen recorder built with web technology
 cask "kap"
+# Password manager app
 cask "keepassxc"
+# Open-source firewall to block unknown outgoing connections
 cask "lulu"
 cask "pusher"
 cask "react-native-debugger"
+# Desktop app for inspecting React JS and React Native projects
 cask "reactotron"
+# Team communication and collaboration software
 cask "slack"
+# Music streaming service
 cask "spotify"
+# Git client
 cask "sublime-merge"
+# Text editor for code, markup and prose
 cask "sublime-text"
+# Configurable document editor that supports Markdown
 cask "typora"
+# Development environment
 cask "vagrant"
+# Binary releases of VS Code without MS branding/telemetry/licensing
 cask "vscodium"
+# Image viewer and file browser
 cask "xee"
+# Video communication and virtual meeting platform
 cask "zoom"

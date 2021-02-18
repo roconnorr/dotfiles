@@ -51,3 +51,5 @@ alias -g S='|sort'
 # Random
 alias ytmp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --embed-thumbnail --add-metadata "
 alias shrug="echo '¯\_(ツ)_/¯'"
+alias burnpc="cat ~/.zshcustom/art/burnpc.txt"
+alias mushroom="cat ~/.zshcustom/art/mushroom.txt"
