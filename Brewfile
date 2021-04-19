@@ -2,6 +2,7 @@ tap "facebook/fb"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -19,6 +20,8 @@ brew "automake"
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # Cross-platform make
@@ -47,6 +50,8 @@ brew "gobject-introspection"
 brew "harfbuzz"
 # Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
+# Secure Reliable Transport
+brew "srt"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # High performance message passing library
@@ -71,6 +76,8 @@ brew "gtk+"
 brew "gtk+3"
 # Integrates GTK macOS applications with the Mac desktop
 brew "gtk-mac-integration"
+# Text-based UI library
+brew "ncurses"
 # Improved top (interactive process viewer)
 brew "htop"
 # Website copier/offline browser
@@ -137,6 +144,8 @@ brew "shellcheck"
 brew "socat"
 # Tool to create intelligent and beautiful documentation
 brew "sphinx-doc"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Terminal multiplexer
 brew "tmux"
 # Image processing library
@@ -186,9 +195,11 @@ cask "docker"
 cask "dropbox"
 # Bitcoin thin client
 cask "electrum"
+# Google Chromium, sans integration with Google
 cask "eloston-chromium"
 # Desktop debugging platform for mobile developers
 cask "flipper"
+cask "font-fira-code"
 cask "godot"
 # Tools to protect your emails and files
 cask "gpg-suite"
@@ -212,6 +223,8 @@ cask "keepassxc"
 cask "lulu"
 # Controls and monitors all fans on Apple computers
 cask "macs-fan-control"
+# Collaboration platform for API development
+cask "postman"
 cask "pusher"
 cask "react-native-debugger"
 # Desktop app for inspecting React JS and React Native projects
