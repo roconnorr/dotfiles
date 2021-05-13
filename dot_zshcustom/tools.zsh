@@ -63,6 +63,7 @@ alias fzfrb="echo '' | fzf --print-query --preview 'ruby -e {q}'"
 # general
 #
 #############################################
+alias code='codium'
 alias batp='bat --plain'
 batdiff() {
     git diff --name-only --diff-filter=d | xargs bat --diff
