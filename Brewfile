@@ -1,3 +1,4 @@
+tap "adoptopenjdk/openjdk"
 tap "facebook/fb"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -168,7 +169,8 @@ brew "zsh-syntax-highlighting"
 brew "facebook/fb/idb-companion"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
-cask "adoptopenjdk"
+# AdoptOpenJDK OpenJDK (Java) Development Kit
+cask "adoptopenjdk15"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Automatic tiling window manager similar to xmonad
