@@ -147,6 +147,8 @@ brew "socat"
 brew "sphinx-doc"
 # Cross-shell prompt for astronauts
 brew "starship"
+# CLI for extracting streams from various websites to a video player
+brew "streamlink"
 # Terminal multiplexer
 brew "tmux"
 # Image processing library
@@ -202,6 +204,7 @@ cask "eloston-chromium"
 # Desktop debugging platform for mobile developers
 cask "flipper"
 cask "font-fira-code"
+# Game development engine
 cask "godot"
 # Tools to protect your emails and files
 cask "gpg-suite"
@@ -228,6 +231,7 @@ cask "macs-fan-control"
 # Collaboration platform for API development
 cask "postman"
 cask "pusher"
+# Standalone app for debugging React Native apps
 cask "react-native-debugger"
 # Desktop app for inspecting React JS and React Native projects
 cask "reactotron"
