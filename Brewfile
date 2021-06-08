@@ -57,12 +57,20 @@ brew "srt"
 brew "ffmpeg"
 # High performance message passing library
 brew "open-mpi"
+# ODBC 3 connectivity for UNIX
+brew "unixodbc"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
 # GitHub command-line tool
 brew "gh"
+# Distributed revision control system
+brew "git"
+# Assuan IPC Library
+brew "libassuan"
+# X.509 and CMS library
+brew "libksba"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Next generation open source RPC library and framework
@@ -105,6 +113,8 @@ brew "librsvg"
 brew "libxml2"
 # YAML Parser
 brew "libyaml"
+# Mac App Store command-line interface
+brew "mas"
 # Intercept, modify, replay, save HTTP/S traffic
 brew "mitmproxy"
 # Remote terminal application
@@ -171,6 +181,8 @@ brew "zsh-syntax-highlighting"
 brew "facebook/fb/idb-companion"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
+# JDK from the Java User Group (JUG)
+cask "adoptopenjdk"
 # AdoptOpenJDK OpenJDK (Java) Development Kit
 cask "adoptopenjdk15"
 # GPU-accelerated terminal emulator
@@ -189,7 +201,7 @@ cask "beaker-browser"
 cask "calibre"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
-# Free universal database tool and SQL client
+# Universal database tool and SQL client
 cask "dbeaver-community"
 # Voice and text chat software
 cask "discord"
@@ -249,3 +261,7 @@ cask "vscodium"
 cask "xee"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "Numbers", id: 409203825
+mas "Tailscale", id: 1475387142
+mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
