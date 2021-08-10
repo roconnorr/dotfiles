@@ -2,6 +2,10 @@
 	excludesfile = ~/.gitignore_global
 [alias]
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    ci = commit
+    co = checkout
+    br = branch
+    last = log -1 HEAD
 [user]
     name = "{{ .name }}"
     email = "{{ .email }}"

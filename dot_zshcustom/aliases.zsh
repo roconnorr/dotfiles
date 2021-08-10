@@ -48,6 +48,9 @@ alias -g H='|head'
 alias -g W='|wc -l'
 alias -g S='|sort'
 
+# git aliases
+alias todos='git diff master...HEAD | grep -i "^+.*TODO"'
+
 # Random
 alias ytmp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --embed-thumbnail --add-metadata "
 alias shrug="echo '¯\_(ツ)_/¯'"
