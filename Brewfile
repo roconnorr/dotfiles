@@ -171,8 +171,6 @@ brew "watchman"
 brew "weechat"
 # Internet file retriever
 brew "wget"
-# JavaScript package manager
-brew "yarn"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # Fish shell like syntax highlighting for zsh
@@ -181,8 +179,6 @@ brew "zsh-syntax-highlighting"
 brew "facebook/fb/idb-companion"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
-# JDK from the Java User Group (JUG)
-cask "adoptopenjdk"
 # AdoptOpenJDK OpenJDK (Java) Development Kit
 cask "adoptopenjdk15"
 # GPU-accelerated terminal emulator
@@ -240,6 +236,8 @@ cask "keepassxc"
 cask "lulu"
 # Controls and monitors all fans on Apple computers
 cask "macs-fan-control"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
 # Collaboration platform for API development
 cask "postman"
 cask "pusher"
@@ -255,13 +253,24 @@ cask "spotify"
 cask "sublime-merge"
 # Text editor for code, markup and prose
 cask "sublime-text"
+# Development environment
+cask "vagrant"
+# Free and open-source hosted hypervisor for x86 virtualization
+cask "virtualbox"
 # Binary releases of VS Code without MS branding/telemetry/licensing
 cask "vscodium"
 # Image viewer and file browser
 cask "xee"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "1Password 7", id: 1333542190
+mas "Bitwarden", id: 1352778147
+mas "GarageBand", id: 682658836
+mas "Harvest", id: 506189836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Tailscale", id: 1475387142
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
