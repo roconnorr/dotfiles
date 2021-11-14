@@ -155,16 +155,12 @@ brew "shellcheck"
 brew "socat"
 # Tool to create intelligent and beautiful documentation
 brew "sphinx-doc"
-# Cross-shell prompt for astronauts
-brew "starship"
 # CLI for extracting streams from various websites to a video player
 brew "streamlink"
 # Terminal multiplexer
 brew "tmux"
 # Image processing library
 brew "vips"
-# 🚀 The Universal WebAssembly Runtime
-brew "wasmer"
 # Watch files and take action when they change
 brew "watchman"
 # Extensible IRC client
@@ -181,8 +177,6 @@ brew "facebook/fb/idb-companion"
 brew "heroku/brew/heroku"
 # AdoptOpenJDK OpenJDK (Java) Development Kit
 cask "adoptopenjdk15"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
 # Tools for building Android applications
