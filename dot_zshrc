@@ -53,7 +53,7 @@ export NVM_AUTO_USE=true
 plugins=(
   git
   zsh-nvm
-  osx
+  macos
   sublime
   sublime-merge
   zsh-autosuggestions
