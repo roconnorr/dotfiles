@@ -57,6 +57,8 @@ brew "srt"
 brew "ffmpeg"
 # High performance message passing library
 brew "open-mpi"
+# Extremely Fast Compression algorithm
+brew "lz4"
 # ODBC 3 connectivity for UNIX
 brew "unixodbc"
 # Command-line fuzzy finder written in Go
@@ -127,6 +129,8 @@ brew "ncdu"
 brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
+# Prometheus exporter for machine metrics
+brew "node_exporter"
 # General-purpose scripting language
 brew "php"
 # Execute binaries from Python packages in isolated environments
@@ -155,6 +159,8 @@ brew "shellcheck"
 brew "socat"
 # Tool to create intelligent and beautiful documentation
 brew "sphinx-doc"
+# Soak up standard input and write to a file
+brew "sponge"
 # CLI for extracting streams from various websites to a video player
 brew "streamlink"
 # Terminal multiplexer
@@ -189,10 +195,14 @@ cask "basictex"
 cask "beaker-browser"
 # E-books management software
 cask "calibre"
+# Server and cloud storage browser
+cask "cyberduck"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Universal database tool and SQL client
 cask "dbeaver-community"
+# Offline toolbox for developers
+cask "devutils"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
