@@ -163,6 +163,8 @@ brew "sphinx-doc"
 brew "sponge"
 # CLI for extracting streams from various websites to a video player
 brew "streamlink"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
 # Image processing library
@@ -249,6 +251,8 @@ cask "pusher"
 cask "react-native-debugger"
 # Desktop app for inspecting React JS and React Native projects
 cask "reactotron"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
@@ -270,6 +274,7 @@ cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Bitwarden", id: 1352778147
 mas "GarageBand", id: 682658836
+mas "Hand Mirror", id: 1502839586
 mas "Harvest", id: 506189836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694

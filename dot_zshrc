@@ -60,6 +60,7 @@ plugins=(
   safe-paste
   docker
   docker-compose
+  thefuck
 )
 
 source $ZSH/oh-my-zsh.sh
