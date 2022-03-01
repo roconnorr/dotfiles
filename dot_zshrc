@@ -60,6 +60,7 @@ plugins=(
   safe-paste
   docker
   docker-compose
+  react-native
   thefuck
 )
 

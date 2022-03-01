@@ -98,6 +98,10 @@ function pr-list() {
     jq --raw-output '.[] | "#\(.number) \(.title)"'
 }
 
+function create-pr() {
+  branchName=$(git rev-parse --abbrev-ref HEAD) && gh pr create -w -t="$branchName"
+}
+
 #############################################
 #
 # general

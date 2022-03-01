@@ -27,6 +27,25 @@ done
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+# today's date
+alias td='echo $(date +%Y-%m-%d)'
+
+# date and time? - add
+
+# # Directory shortcuts
+# hash -d pack=$HOME/.cache/vim/pack/plugins/start
+# hash -d vim=/usr/share/vim/vim82
+# hash -d d=$HOME/code/arp242.net/_drafts
+# hash -d p=$HOME/code/arp242.net/_posts
+# hash -d go=/usr/lib/go/src
+# hash -d c=$HOME/code
+# hash -d gc=$HOME/code/goatcounter
+
+# So if I have an idea for a new post here I just type vi ~d/$(td)-idea.markdown and presto (td is alias td='echo $(date +%Y-%m-%d)').
+
+# create a temp shortcut for the current dir
+hashcwd() { hash -d "$1"="$PWD" }
+
 ## Command Aliases
 alias x=exit
 alias c=clear
@@ -49,10 +68,13 @@ alias -g W='|wc -l'
 alias -g S='|sort'
 
 # git aliases
-alias todos='git diff master...HEAD | grep -i "^+.*TODO"'
+alias todos='git diff $(git branch -l master main | sed "s/^* //")...HEAD | grep -i "^+.*TODO"'
 
 # Random
 alias ytmp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --embed-thumbnail --add-metadata "
 alias shrug="echo '¯\_(ツ)_/¯'"
 alias burnpc="cat ~/.zshcustom/art/burnpc.txt"
 alias mushroom="cat ~/.zshcustom/art/mushroom.txt"
+
+# streams
+alias brainfeeder="streamlink --stdout https://www.twitch.tv/brainfeeder 720p | iina --stdin"
