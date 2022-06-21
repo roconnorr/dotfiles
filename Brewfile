@@ -1,4 +1,3 @@
-tap "adoptopenjdk/openjdk"
 tap "facebook/fb"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -9,18 +8,18 @@ tap "homebrew/core"
 tap "homebrew/services"
 # Library for command-line editing
 brew "readline"
-# Command-line interface for SQLite
-brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Core application library for C
 brew "glib"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Collection of portable C++ source libraries
+brew "boost"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # Manage your dotfiles across multiple diverse machines, securely
@@ -30,19 +29,33 @@ brew "cmake"
 # Console Matrix
 brew "cmatrix"
 # GNU File, Shell, and Text utilities
-brew "coreutils", link: false
+brew "coreutils"
 # Configurable talking characters in ASCII art
 brew "cowsay"
-# Open source suite of directory software
-brew "openldap"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Power of curl, ease of use of httpie
+brew "curlie"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Command-line DNS client
+brew "dog"
+# More intuitive version of du in rust
+brew "dust"
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
 # Modern replacement for 'ls'
 brew "exa"
+# Collection of reusable C++ library artifacts developed at Facebook
+brew "folly"
+# C++14 implementation of the TLS-1.3 standard
+brew "fizz"
+# Modular, composable client/server abstractions framework
+brew "wangle"
+# Facebook's branch of Apache Thrift, including a new C++ server
+brew "fbthrift"
+# Thrift functions for querying information from a service
+brew "fb303"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # Generate introspection data for GObject libraries
@@ -55,12 +68,6 @@ brew "libass"
 brew "srt"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
-# High performance message passing library
-brew "open-mpi"
-# Extremely Fast Compression algorithm
-brew "lz4"
-# ODBC 3 connectivity for UNIX
-brew "unixodbc"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Toolkit for image loading and pixel buffer manipulation
@@ -69,20 +76,16 @@ brew "gdk-pixbuf"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Assuan IPC Library
-brew "libassuan"
-# X.509 and CMS library
-brew "libksba"
 # GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
+brew "gnupg", link: false
+# Ping, but with a graph
+brew "gping"
 # Next generation open source RPC library and framework
 brew "grpc"
 # GSettings schemas for desktop components
 brew "gsettings-desktop-schemas"
 # Framework for layout and rendering of i18n text
 brew "pango"
-# GUI toolkit
-brew "gtk+"
 # Toolkit for creating graphical user interfaces
 brew "gtk+3"
 # Integrates GTK macOS applications with the Mac desktop
@@ -91,24 +94,26 @@ brew "gtk-mac-integration"
 brew "ncurses"
 # Improved top (interactive process viewer)
 brew "htop"
+# Apache HTTP server
+brew "httpd", link: false
 # Website copier/offline browser
 brew "httrack"
+# Command-line benchmarking tool
+brew "hyperfine"
 # Database of common MIME types
 brew "shared-mime-info"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Tool to measure maximum TCP and UDP bandwidth
 brew "iperf"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Network authentication protocol
-brew "krb5"
 # Lazier way to manage everything docker
 brew "lazydocker"
-# Postgres C API library
-brew "libpq"
 # Library to render SVG files using Cairo
 brew "librsvg"
 # GNOME XML library
@@ -131,10 +136,12 @@ brew "neovim"
 brew "nmap"
 # Prometheus exporter for machine metrics
 brew "node_exporter"
-# General-purpose scripting language
-brew "php"
 # Execute binaries from Python packages in isolated environments
-brew "pipx"
+brew "pipx", link: false
+# Tool for managing OCI containers and pods
+brew "podman"
+# Cross-platform application and UI framework
+brew "qt"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
@@ -165,6 +172,8 @@ brew "sponge"
 brew "streamlink"
 # Programmatically correct mistyped console commands
 brew "thefuck"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Image processing library
@@ -183,12 +192,12 @@ brew "zsh-syntax-highlighting"
 brew "facebook/fb/idb-companion"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
-# AdoptOpenJDK OpenJDK (Java) Development Kit
-cask "adoptopenjdk15"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
 # Tools for building Android applications
 cask "android-studio"
+# GUI inspector for mobile apps
+cask "appium-inspector"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
@@ -209,8 +218,6 @@ cask "devutils"
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Client for the Dropbox cloud storage service
-cask "dropbox"
 # Bitcoin thin client
 cask "electrum"
 # Google Chromium, sans integration with Google
@@ -220,6 +227,8 @@ cask "flipper"
 cask "font-fira-code"
 # Game development engine
 cask "godot"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "google-cloud-sdk"
 # Tools to protect your emails and files
 cask "gpg-suite"
 # Graphically shows disk usage within a file system
@@ -247,6 +256,8 @@ cask "monitorcontrol"
 # Collaboration platform for API development
 cask "postman"
 cask "pusher"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Standalone app for debugging React Native apps
 cask "react-native-debugger"
 # Desktop app for inspecting React JS and React Native projects
@@ -261,10 +272,8 @@ cask "spotify"
 cask "sublime-merge"
 # Text editor for code, markup and prose
 cask "sublime-text"
-# Development environment
-cask "vagrant"
-# Free and open-source hosted hypervisor for x86 virtualization
-cask "virtualbox"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin11"
 # Binary releases of VS Code without MS branding/telemetry/licensing
 cask "vscodium"
 # Image viewer and file browser
@@ -281,5 +290,6 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Tailscale", id: 1475387142
+mas "Transporter", id: 1450874784
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
