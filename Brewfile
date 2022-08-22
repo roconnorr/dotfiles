@@ -6,12 +6,12 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+# Core application library for C
+brew "glib"
 # Library for command-line editing
 brew "readline"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-# Core application library for C
-brew "glib"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -20,6 +20,8 @@ brew "bash"
 brew "bat"
 # Collection of portable C++ source libraries
 brew "boost"
+# Command-line tool to manipulate Android App Bundles
+brew "bundletool"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # Manage your dotfiles across multiple diverse machines, securely
@@ -58,18 +60,26 @@ brew "fbthrift"
 brew "fb303"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
-# Generate introspection data for GObject libraries
-brew "gobject-introspection"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
 # Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
 # Secure Reliable Transport
 brew "srt"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Command-line tools for fly.io services
+brew "flyctl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNOME XML library
+brew "libxml2"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Geospatial Data Abstraction Library
+brew "gdal"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
 # GitHub command-line tool
@@ -116,8 +126,6 @@ brew "jq"
 brew "lazydocker"
 # Library to render SVG files using Cairo
 brew "librsvg"
-# GNOME XML library
-brew "libxml2"
 # YAML Parser
 brew "libyaml"
 # Mac App Store command-line interface
@@ -140,14 +148,12 @@ brew "node_exporter"
 brew "pipx", link: false
 # Tool for managing OCI containers and pods
 brew "podman"
-# Cross-platform application and UI framework
-brew "qt"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler"
 # Object-relational database system
 brew "postgresql"
 # Implementation of Telnet and SSH
 brew "putty"
+# Cross-platform application and UI framework
+brew "qt"
 # Install various Ruby versions and implementations
 brew "ruby-build"
 # Ruby version manager
@@ -227,6 +233,8 @@ cask "flipper"
 cask "font-fira-code"
 # Game development engine
 cask "godot"
+# Web browser
+cask "google-chrome"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # Tools to protect your emails and files
@@ -256,6 +264,8 @@ cask "monitorcontrol"
 # Collaboration platform for API development
 cask "postman"
 cask "pusher"
+# Geographic Information System
+cask "qgis"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Standalone app for debugging React Native apps
