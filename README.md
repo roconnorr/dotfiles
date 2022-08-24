@@ -2,4 +2,4 @@
 
 ### Setup
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/roconnorr/dotfiles/master/init.sh)"`
+`/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/roconnorr/dotfiles/master/init.sh)"`
