@@ -1,5 +1,3 @@
-tap "facebook/fb"
-tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -8,10 +6,6 @@ tap "homebrew/core"
 tap "homebrew/services"
 # Core application library for C
 brew "glib"
-# Library for command-line editing
-brew "readline"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -58,12 +52,12 @@ brew "wangle"
 brew "fbthrift"
 # Thrift functions for querying information from a service
 brew "fb303"
+# Library for command-line editing
+brew "readline"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # OpenType text shaping engine
 brew "harfbuzz"
-# Generate introspection data for GObject libraries
-brew "gobject-introspection"
 # Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
 # Secure Reliable Transport
@@ -88,6 +82,8 @@ brew "gh"
 brew "git"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg", link: false
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
 # Ping, but with a graph
 brew "gping"
 # Next generation open source RPC library and framework
@@ -114,8 +110,6 @@ brew "hyperfine"
 brew "shared-mime-info"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Tool to measure maximum TCP and UDP bandwidth
@@ -134,8 +128,6 @@ brew "mas"
 brew "mitmproxy"
 # Remote terminal application
 brew "mosh"
-# Open source relational database management system
-brew "mysql-client"
 # NCurses Disk Usage
 brew "ncdu"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -152,6 +144,10 @@ brew "podman"
 brew "postgresql"
 # Implementation of Telnet and SSH
 brew "putty"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Cross-platform application and UI framework
 brew "qt"
 # Install various Ruby versions and implementations
@@ -194,12 +190,6 @@ brew "wget"
 brew "youtube-dl"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# A Powerful Command Line for automating iOS Simulators
-brew "facebook/fb/idb-companion"
-# Everything you need to get started with Heroku
-brew "heroku/brew/heroku"
-# Automatic tiling window manager similar to xmonad
-cask "amethyst"
 # Tools for building Android applications
 cask "android-studio"
 # GUI inspector for mobile apps
@@ -208,8 +198,6 @@ cask "appium-inspector"
 cask "balenaetcher"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
-# Experimental peer-to-peer web browser
-cask "beaker-browser"
 # E-books management software
 cask "calibre"
 # Server and cloud storage browser
@@ -220,23 +208,19 @@ cask "db-browser-for-sqlite"
 cask "dbeaver-community"
 # Offline toolbox for developers
 cask "devutils"
-# Voice and text chat software
-cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Bitcoin thin client
 cask "electrum"
 # Google Chromium, sans integration with Google
 cask "eloston-chromium"
-# Desktop debugging platform for mobile developers
-cask "flipper"
+# Web browser
+cask "firefox"
 cask "font-fira-code"
 # Game development engine
 cask "godot"
 # Web browser
 cask "google-chrome"
-# Set of tools to manage resources and applications hosted on Google Cloud
-cask "google-cloud-sdk"
 # Tools to protect your emails and files
 cask "gpg-suite"
 # Graphically shows disk usage within a file system
@@ -255,14 +239,10 @@ cask "joplin"
 cask "kap"
 # Password manager app
 cask "keepassxc"
-# Open-source firewall to block unknown outgoing connections
-cask "lulu"
 # Controls and monitors all fans on Apple computers
 cask "macs-fan-control"
-# Tool to control external monitor brightness & volume
-cask "monitorcontrol"
-# Collaboration platform for API development
-cask "postman"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 cask "pusher"
 # Geographic Information System
 cask "qgis"
@@ -286,12 +266,13 @@ cask "sublime-text"
 cask "temurin11"
 # Binary releases of VS Code without MS branding/telemetry/licensing
 cask "vscodium"
+# JavaScript IDE
+cask "webstorm"
 # Image viewer and file browser
 cask "xee"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password 7", id: 1333542190
-mas "Bitwarden", id: 1352778147
 mas "GarageBand", id: 682658836
 mas "Hand Mirror", id: 1502839586
 mas "Harvest", id: 506189836
@@ -301,5 +282,6 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Tailscale", id: 1475387142
 mas "Transporter", id: 1450874784
+mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
