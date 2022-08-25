@@ -1,0 +1,15 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+
+	"theme": "auto",
+	"font_face": "Fira Code",
+	"font_size": 16,
+	"side_bar_layout": "locations_as_column",
+	"diff_style": "side-by-side",
+	"always_show_command_status": true,
+	"expand_merge_commits_by_default": false,
+	"ignore_diff_white_space": false,
+	"image_diff_style": "onion-skin",
+	"trim_trailing_white_space_on_save": false,
+}

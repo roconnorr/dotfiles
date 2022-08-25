@@ -17,5 +17,7 @@
     "dot_gitconfig": "properties"
   },
   "workbench.editor.enablePreview": false,
-  "shellcheck.executablePath": "shellcheck"
+  "shellcheck.executablePath": "shellcheck",
+  "editor.fontFamily": "'Fira Code', monospace",
+  "editor.fontSize": 16
 }
