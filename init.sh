@@ -37,7 +37,7 @@ compaudit | xargs chmod g-w,o-w
 # apple tweaks
 # Screenshots directory
 mkdir ~/Pictures/Screenshots
-defaults write com.apple.screencapture location ~/Screenshots
+defaults write com.apple.screencapture location ~/Pictures/Screenshots
 
 # Show appswitcher on all displays
 defaults write com.apple.Dock appswitcher-all-displays -bool true
