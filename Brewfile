@@ -18,6 +18,8 @@ brew "boost"
 brew "bundletool"
 # Manage compile and link flags for libraries
 brew "pkg-config"
+# Deduplicating archiver with compression and authenticated encryption
+brew "borgbackup"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # Cross-platform make
@@ -172,6 +174,8 @@ brew "sphinx-doc"
 brew "sponge"
 # CLI for extracting streams from various websites to a video player
 brew "streamlink"
+# Open source continuous file synchronization application
+brew "syncthing", restart_service: true
 # Programmatically correct mistyped console commands
 brew "thefuck"
 # Simplified and community-driven man pages
