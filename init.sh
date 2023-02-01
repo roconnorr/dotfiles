@@ -39,6 +39,12 @@ compaudit | xargs chmod g-w,o-w
 mkdir ~/Pictures/Screenshots
 defaults write com.apple.screencapture location ~/Pictures/Screenshots
 
+# Prefer finder list view
+defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+
+# Show library folder
+chflags nohidden ~/Library
+
 # Show appswitcher on all displays
 defaults write com.apple.Dock appswitcher-all-displays -bool true
 killall Dock
