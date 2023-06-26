@@ -68,7 +68,8 @@ alias -g W='|wc -l'
 alias -g S='|sort'
 
 # git aliases
-alias todos='git diff $(git branch -l master main | sed "s/^* //")...HEAD | grep -i "^+.*TODO"'
+alias todos='git diff $(git branch -l master main | sed "s/^* //")...HEAD | grep -i -B 1 -A 1 "^+.*TODO"'
+alias consolelogs='git diff $(git branch -l master main | sed "s/^* //")...HEAD | grep -i -B 1 -A 1 "^+.*console"'
 
 # Random
 alias ytmp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --embed-thumbnail --add-metadata "
