@@ -12,6 +12,8 @@ path+=("$HOME/.zshcustom/shellscripts")
 path+=("$HOME/.rbenv/bin")
 eval "$(rbenv init - zsh)"
 
+path+=("$(go env GOPATH)/bin")
+
 path+=("$HOME/Library/Android/sdk/platform-tools")
 path+=("$HOME/Library/Android/sdk/emulator")
 export ANDROID_HOME=~/Library/Android/sdk
