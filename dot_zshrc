@@ -59,6 +59,7 @@ plugins=(
   sublime
   sublime-merge
   zsh-autosuggestions
+  zsh-histdb-skim
   safe-paste
   docker
   docker-compose
@@ -67,3 +68,5 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+bindkey '^R' histdb-skim-widget
