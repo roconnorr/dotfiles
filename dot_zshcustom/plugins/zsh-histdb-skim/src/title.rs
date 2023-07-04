@@ -21,23 +21,23 @@ pub fn generate_title(location: &Location) -> String {
 
     let header_map = enum_map! {
         Location::Session =>
-" ┏━━━━━━━━━━━┱─────────────┬────────┬──────────────┐
- ┃F1: Session┃F2: Directory│F3: Host│F4: Everywhere│ F5: Toggle group
-━┛           ┗━━━━━━━━━━━━━┷━━━━━━━━┷━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━",
+" ┏━━━━━━━┱─────────┬────┬──────────┐
+ ┃Session┃Directory│Host│Everywhere│ F5: Toggle group
+━┛       ┗━━━━━━━━━┷━━━━┷━━━━━━━━━━┷━━━━━━━━━━━━━━━━━",
         Location::Directory =>
-" ┌───────────┲━━━━━━━━━━━━━┱────────┬──────────────┐
- │F1: Session┃F2: Directory┃F3: Host│F4: Everywhere│ F5: Toggle group
-━┷━━━━━━━━━━━┛             ┗━━━━━━━━┷━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━",
+" ┌───────┲━━━━━━━━━┱────┬──────────┐
+ │Session┃Directory┃Host│Everywhere│ F5: Toggle group
+━┷━━━━━━━┛         ┗━━━━┷━━━━━━━━━━┷━━━━━━━━━━━━━━━━━",
 
         Location::Machine =>
-" ┌───────────┬─────────────┲━━━━━━━━┱──────────────┐
- │F1: Session│F2: Directory┃F3: Host┃F4: Everywhere│ F5: Toggle group
-━┷━━━━━━━━━━━┷━━━━━━━━━━━━━┛        ┗━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━",
+" ┌───────┬─────────┲━━━━┱──────────┐
+ │Session│Directory┃Host┃Everywhere│ F5: Toggle group
+━┷━━━━━━━┷━━━━━━━━━┛    ┗━━━━━━━━━━┷━━━━━━━━━━━━━━━━━",
 
         Location::Everywhere =>
-" ┌───────────┬─────────────┬────────┲━━━━━━━━━━━━━━┓
- │F1: Session│F2: Directory│F3: Host┃F4: Everywhere┃ F5: Toggle group
-━┷━━━━━━━━━━━┷━━━━━━━━━━━━━┷━━━━━━━━┛              ┗━━━━━━━━━━━━━━━━━",
+" ┌───────┬─────────┬────┲━━━━━━━━━━┓
+ │Session│Directory│Host┃Everywhere┃ F5: Toggle group
+━┷━━━━━━━┷━━━━━━━━━┷━━━━┛          ┗━━━━━━━━━━━━━━━━━",
     };
 
     let title = format!(
