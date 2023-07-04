@@ -10,6 +10,14 @@ else
     echo "Homebrew is already installed."
 fi
 
+# Install Rust
+if ! which -s cargo;
+then
+    echo "Installing Rust..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+else
+    echo "Rust is already installed."
+fi
 echo "init chezmoi"
 brew install chezmoi
 # todo: point this repo at ssh instead of https
