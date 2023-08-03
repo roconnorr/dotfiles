@@ -1,7 +1,7 @@
 [core]
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
 [alias]
-	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     ci = commit
     co = checkout
     br = branch
@@ -9,7 +9,10 @@
 [user]
     name = "{{ .name }}"
     email = "{{ .email }}"
+    signingkey = "{{ .signingkey }}"
 [gpg]
-	program = gpg2
+    program = gpg
+[commit]
+    gpgsign = true
 [init]
     defaultBranch = main

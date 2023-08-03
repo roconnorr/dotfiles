@@ -172,6 +172,8 @@ brew "neovim"
 brew "nmap"
 # Prometheus exporter for machine metrics
 brew "node_exporter"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Tool for managing OCI containers and pods
@@ -266,8 +268,6 @@ cask "font-fira-code"
 cask "godot"
 # Web browser
 cask "google-chrome"
-# Tools to protect your emails and files
-cask "gpg-suite"
 # Graphically shows disk usage within a file system
 cask "grandperspective"
 # Desktop automation application

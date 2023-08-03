@@ -11,8 +11,10 @@
 #
 # {{- /* This file supports Go's text/template language. */}}
 
+{{- $name := promptString "Git name for the author/committer" }}
 {{- $email := promptString "Git email address for the author/committer" }}
-{{- $name := promptString "Git username for the author/committer" }}
+{{- $signingkey := promptString "Git commit signing key for the author/committer" }}
 [data]
     email = "{{ $email }}"
     name = "{{ $name }}"
+    signingkey = "{{ $signingkey }}"
