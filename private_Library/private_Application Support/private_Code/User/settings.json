@@ -1,0 +1,47 @@
+{
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "workbench.editor.enablePreview": false,
+  "editor.fontFamily": "'Fira Code', monospace",
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.codeActionsOnSave.mode": "problems",
+  "files.associations": {
+    "dot_zshrc": "shellscript",
+    "dot_gitignore_global": "shellscript",
+    "dot_gitconfig": "properties"
+  },
+  "shellcheck.executablePath": "shellcheck",
+  "redhat.telemetry.enabled": false,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "colorize.languages": [
+    "javascript",
+    "typescript",
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg"
+  ],
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
+}

@@ -1,8 +1,6 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
@@ -238,8 +236,6 @@ brew "youtube-dl"
 brew "zsh-syntax-highlighting"
 # Tools for building Android applications
 cask "android-studio"
-# GUI inspector for mobile apps
-cask "appium-inspector"
 # Securely stores and accesses AWS credentials in a development environment
 cask "aws-vault"
 # Tool to flash OS images to SD cards & USB drives
@@ -316,8 +312,6 @@ cask "temurin11"
 cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
-# Binary releases of VS Code without MS branding/telemetry/licensing
-cask "vscodium"
 # JavaScript IDE
 cask "webstorm"
 # Image viewer and file browser
