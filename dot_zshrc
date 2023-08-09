@@ -20,6 +20,7 @@ export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_AVD_HOME=~/.android/avd
 
+export EDITOR=code
 export REACT_EDITOR=webstorm
 
 # Path to your oh-my-zsh installation.

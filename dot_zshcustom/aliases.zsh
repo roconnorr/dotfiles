@@ -55,7 +55,7 @@ alias sls='screen -ls'
 alias sreload='source ~/.zshrc'
 alias o='open'
 alias cz='chezmoi'
-alias rc='chezmoi cd && code .'
+alias rc='chezmoi edit'
 alias dots='chezmoi cd'
 alias cza='chezmoi apply -v && source ~/.zshrc'
 
