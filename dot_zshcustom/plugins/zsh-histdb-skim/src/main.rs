@@ -72,9 +72,9 @@ struct SelectionResult {
 }
 
 fn get_starting_location() -> Location {
-    let mut location = Location::Directory;
+    let mut location = Location::Everywhere;
     if get_current_session_id() == "" {
-        location = Location::Directory;
+        location = Location::Everywhere;
     }
     location
 }
