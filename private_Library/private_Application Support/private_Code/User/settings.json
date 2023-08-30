@@ -22,6 +22,8 @@
       "mode": "auto"
     }
   ],
+  "ruby.useLanguageServer": true,
+  "ruby.intellisense": "rubyLocate",
   "colorize.languages": [
     "javascript",
     "typescript",
@@ -43,5 +45,6 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
+  "files.autoSave": "afterDelay"
 }
