@@ -4,7 +4,6 @@
   "editor.minimap.enabled": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "workbench.editor.enablePreview": false,
   "editor.fontFamily": "'Fira Code', monospace",
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
@@ -13,7 +12,8 @@
   "files.associations": {
     "dot_zshrc": "shellscript",
     "dot_gitignore_global": "shellscript",
-    "dot_gitconfig": "properties"
+    "dot_gitconfig": "properties",
+    "Brewfile.*": "ruby"
   },
   "shellcheck.executablePath": "shellcheck",
   "redhat.telemetry.enabled": false,
@@ -22,8 +22,6 @@
       "mode": "auto"
     }
   ],
-  "ruby.useLanguageServer": true,
-  "ruby.intellisense": "rubyLocate",
   "colorize.languages": [
     "javascript",
     "typescript",
@@ -46,5 +44,24 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "files.autoSave": "afterDelay"
+  "files.autoSave": "afterDelay",
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": false,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": false,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true,
+    "references": true
+  }
 }

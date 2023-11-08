@@ -12,7 +12,7 @@ detectLogiMouseExtraButtons = hs.eventtap.new({
   -- if button == 2 then print('middle click')
 
   -- rear extra button
-  if button == 3 then hs.application.launchOrFocus("LaunchPad.app")
+  if button == 3 then hs.spaces.toggleShowDesktop()
   -- front extra button
   elseif button == 4 then hs.application.launchOrFocus("Mission Control.app")
   end

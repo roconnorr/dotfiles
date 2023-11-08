@@ -113,9 +113,7 @@ brew "gnupg"
 # Command-driven, interactive function plotting
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
-brew "go", link: false
-# Open source programming language to build simple/reliable/efficient software
-brew "go@1.18", link: true
+brew "go"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
 # Ping, but with a graph
@@ -148,10 +146,14 @@ brew "imagemagick"
 brew "iperf"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Lazier way to manage everything docker
 brew "lazydocker"
+# Simple terminal UI for git commands
+brew "lazygit"
 # YAML Parser
 brew "libyaml"
 # Utility for directing compilation
@@ -170,6 +172,8 @@ brew "neovim"
 brew "nmap"
 # Prometheus exporter for machine metrics
 brew "node_exporter"
+# Modern shell for the GitHub era
+brew "nushell"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Execute binaries from Python packages in isolated environments
@@ -214,6 +218,8 @@ brew "sponge"
 brew "streamlink"
 # Open source continuous file synchronization application
 brew "syncthing", restart_service: true
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Programmatically correct mistyped console commands
@@ -341,6 +347,7 @@ vscode "GraphQL.vscode-graphql"
 vscode "GraphQL.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
 vscode "kamikillerto.vscode-colorize"
+vscode "KoichiSasada.vscode-rdbg"
 vscode "me-dutour-mathieu.vscode-github-actions"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
@@ -351,19 +358,20 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode-remote.vscode-remote-extensionpack"
+vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "msjsdiag.vscode-react-native"
+vscode "ninoseki.vscode-gem-lens"
 vscode "Orta.vscode-ios-common-files"
 vscode "Prisma.prisma"
-vscode "rebornix.ruby"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "serayuzgur.crates"
 vscode "sharat.vscode-brewfile"
+vscode "Shopify.ruby-lsp"
 vscode "tamasfe.even-better-toml"
 vscode "timonwong.shellcheck"
-vscode "wingrunr21.vscode-ruby"
 vscode "zhuangtongfa.material-theme"
 vscode "zxh404.vscode-proto3"

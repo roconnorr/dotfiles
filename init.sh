@@ -18,11 +18,10 @@ then
 else
     echo "Rust is already installed."
 fi
+
 echo "init chezmoi"
 brew install chezmoi
-# todo: point this repo at ssh instead of https
-chezmoi init https://github.com/roconnorr/dotfiles.git
-chezmoi apply
+chezmoi init --apply --verbose https://github.com/roconnorr/dotfiles.git
 
 # install homebrew packages
 brew bundle install
