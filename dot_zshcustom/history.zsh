@@ -6,7 +6,12 @@ add-zsh-hook precmd histdb-update-outcome
 source $ZSH_CUSTOM/plugins/zsh-histdb/histdb-interactive.zsh
 bindkey '^r' _histdb-isearch
 
-source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -z "$HOMEBREW_PREFIX" ]
+then
+      source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+      source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 _zsh_autosuggest_strategy_histdb_top_here() {
     local query="select commands.argv from
