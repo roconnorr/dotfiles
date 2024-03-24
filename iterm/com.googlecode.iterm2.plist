@@ -1689,7 +1689,7 @@
 	<key>Print In Black And White</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
@@ -1702,5 +1702,7 @@
 	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
+	<key>kTurnOffSlowTriggersOfferUserDefaultsKey</key>
+	<false/>
 </dict>
 </plist>

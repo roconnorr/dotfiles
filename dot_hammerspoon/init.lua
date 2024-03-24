@@ -83,6 +83,13 @@ end
 --   end
 -- end
 
+function toggshow()
+  return function()
+    hs.spaces.toggleShowDesktop()
+  end
+end
+-- hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "s", toggshow())
+
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "p", moveWindowToDisplay('left'))
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "o", moveWindowToDisplay('right'))
 -- hs.hotkey.bind({"ctrl", "alt", "cmd"}, "3", moveWindowToDisplay(3))

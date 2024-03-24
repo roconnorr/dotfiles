@@ -13,6 +13,8 @@ eval "$(rbenv init - zsh)"
 
 path+=("$(go env GOPATH)/bin")
 
+path+=("$$HOME/.maestro/bin")
+
 path+=("$HOME/Library/Android/sdk/platform-tools")
 path+=("$HOME/Library/Android/sdk/emulator")
 export ANDROID_HOME=~/Library/Android/sdk
@@ -49,7 +51,7 @@ ZSH_CUSTOM=$HOME/.zshcustom
 export NVM_LAZY_LOAD=true
 export NVM_AUTO_USE=true
 # Extra commands to trigger nvm load
-# export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim')
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim' 'just' 'make')
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -78,3 +80,5 @@ source $ZSH/oh-my-zsh.sh
 function zvm_after_init() {
    zvm_bindkey viins '^R' histdb-skim-widget 
 }
+
+eval "$(direnv hook zsh)"
