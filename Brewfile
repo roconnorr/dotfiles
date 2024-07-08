@@ -2,10 +2,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
-# Next generation open source RPC library and framework
-brew "grpc"
 # Library for command-line editing
 brew "readline"
 # Core application library for C
@@ -24,12 +20,6 @@ brew "icu4c"
 brew "boost"
 # Deduplicating archiver with compression and authenticated encryption
 brew "borgbackup"
-# OpenType text shaping engine
-brew "harfbuzz"
-# Development kit for the Java programming language
-brew "openjdk"
-# Command-line tool to manipulate Android App Bundles
-brew "bundletool"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Multi-platform, multi-architecture disassembly framework
@@ -48,6 +38,8 @@ brew "unbound"
 brew "ncurses"
 # Generic machine emulator and virtualizer
 brew "qemu"
+# Linux virtual machines
+brew "lima"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # GNU File, Shell, and Text utilities
@@ -60,6 +52,8 @@ brew "curl"
 brew "curlie"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Text processing system for reStructuredText
 brew "docutils"
 # Command-line DNS client
@@ -68,6 +62,14 @@ brew "dog"
 brew "dust"
 # Collection of reusable C++ library artifacts developed at Facebook
 brew "folly"
+# C++14 implementation of the TLS-1.3 standard
+brew "fizz"
+# Modular, composable client/server abstractions framework
+brew "wangle"
+# Facebook's branch of Apache Thrift, including a new C++ server
+brew "fbthrift"
+# Thrift functions for querying information from a service
+brew "fb303"
 # Shared library for Watchman and Eden projects
 brew "edencommon"
 # Programming language for highly scalable real-time systems
@@ -76,14 +78,8 @@ brew "erlang"
 brew "elixir"
 # Modern replacement for 'ls'
 brew "exa"
-# C++14 implementation of the TLS-1.3 standard
-brew "fizz"
-# Modular, composable client/server abstractions framework
-brew "wangle"
-# Thrift functions for querying information from a service
-brew "fb303"
-# Facebook's branch of Apache Thrift, including a new C++ server
-brew "fbthrift"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
 # Framework for layout and rendering of i18n text
@@ -98,22 +94,6 @@ brew "ffmpeg"
 brew "flyctl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
-# Network authentication protocol
-brew "krb5"
-# Database of common MIME types
-brew "shared-mime-info"
-# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
-brew "libheif"
-# GNOME XML library
-brew "libxml2"
-# Libraries for security-enabled client and server applications
-brew "nss"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler"
-# Geospatial Data Abstraction Library
-brew "gdal"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
 # GitHub command-line tool
@@ -122,6 +102,8 @@ brew "gh"
 brew "git"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Cross-platform application and UI framework
 brew "qt"
 # Command-driven, interactive function plotting
@@ -156,6 +138,10 @@ brew "hyperfine"
 brew "libimobiledevice"
 # Tool for managing apps on iOS devices
 brew "ideviceinstaller"
+# Database of common MIME types
+brew "shared-mime-info"
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+brew "libheif"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Tool to measure maximum TCP and UDP bandwidth
@@ -164,6 +150,8 @@ brew "iperf"
 brew "jq"
 # Handy way to save and run project-specific commands
 brew "just"
+# Network authentication protocol
+brew "krb5"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Lazier way to manage everything docker
@@ -178,6 +166,8 @@ brew "llm"
 brew "make"
 # Mac App Store command-line interface
 brew "mas"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Intercept, modify, replay, save HTTP/S traffic
 brew "mitmproxy"
 # Simple tool to make locally trusted development certificates
@@ -192,14 +182,22 @@ brew "neovim"
 brew "nmap"
 # Prometheus exporter for machine metrics
 brew "node_exporter"
+# Libraries for security-enabled client and server applications
+brew "nss"
 # Modern shell for the GitHub era
 brew "nushell"
+# Development kit for the Java programming language
+brew "openjdk@17"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Tool for managing OCI containers and pods
 brew "podman"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Object-relational database system
+brew "postgresql@15"
 # Implementation of Telnet and SSH
 brew "putty"
 # Interpreted, interactive, object-oriented programming language
@@ -236,6 +234,8 @@ brew "sponge"
 brew "streamlink"
 # Formatting technology for Swift source code
 brew "swift-format"
+# Tool to enforce Swift style and conventions
+brew "swiftlint"
 # Open source continuous file synchronization application
 brew "syncthing", restart_service: true
 # Easiest, most secure way to use WireGuard and 2FA
@@ -268,6 +268,8 @@ cask "aws-vault"
 cask "balenaetcher"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
+# App for managing battery charging. (Also installs a CLI on first use.)
+cask "battery"
 # Desktop password and login vault
 cask "bitwarden"
 # Server and cloud storage browser
@@ -278,6 +280,8 @@ cask "db-browser-for-sqlite"
 cask "dbeaver-community"
 # App to build and share containerised applications and microservices
 cask "docker"
+# Tool to hide status bar icons
+cask "dozer"
 # Bitcoin thin client
 cask "electrum"
 # Google Chromium, sans integration with Google
@@ -286,9 +290,7 @@ cask "eloston-chromium"
 cask "expo-orbit"
 # Web browser
 cask "firefox"
-# Free monospaced font with programming ligatures
 cask "font-fira-code"
-# Developer targeted fonts with a high number of glyphs
 cask "font-hack-nerd-font"
 # Web browser
 cask "google-chrome"
@@ -298,36 +300,26 @@ cask "grandperspective"
 cask "hammerspoon"
 # Free and open-source media player
 cask "iina"
-# HTTP and GraphQL Client
-cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# Note taking and to-do application with synchronisation capabilities
-cask "joplin"
 # Open-source screen recorder built with web technology
 cask "kap"
 # Password manager app
 cask "keepassxc"
 # Controls and monitors all fans on Apple computers
 cask "macs-fan-control"
-# CSV editor
-cask "modern-csv"
-# Reverse proxy, secure introspectable tunnels to localhost
-cask "ngrok"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Replacement for Docker Desktop
+cask "orbstack"
 # Collaboration platform for API development
 cask "postman"
 # Send push notifications through Apple Push Notification Service
 cask "pusher"
-# Geographic Information System
-cask "qgis"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Standalone app for debugging React Native apps
-cask "react-native-debugger"
 # Desktop app for inspecting React JS and React Native projects
 cask "reactotron"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -338,30 +330,22 @@ cask "redisinsight"
 cask "shortcat"
 # Team communication and collaboration software
 cask "slack"
-# Music streaming service
-cask "spotify"
 # Git client
 cask "sublime-merge"
 # Text editor for code, markup and prose
 cask "sublime-text"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin11"
 # Customizable timing of breaks
 cask "time-out"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
-# JavaScript IDE
-cask "webstorm"
 # Image viewer and file browser
 cask "xee"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Charmstone", id: 1563735522
-mas "GarageBand", id: 682658836
 mas "Hand Mirror", id: 1502839586
-mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -372,7 +356,9 @@ mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 vscode "alexandernanberg.horizon-theme-vscode"
+vscode "bradlc.vscode-tailwindcss"
 vscode "dbaeumer.vscode-eslint"
+vscode "eamodio.gitlens"
 vscode "efoerster.texlab"
 vscode "esbenp.prettier-vscode"
 vscode "expo.vscode-expo-tools"
@@ -385,6 +371,7 @@ vscode "graphql.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
 vscode "kamikillerto.vscode-colorize"
 vscode "koichisasada.vscode-rdbg"
+vscode "lokalise.i18n-ally"
 vscode "me-dutour-mathieu.vscode-github-actions"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
@@ -420,6 +407,7 @@ vscode "timonwong.shellcheck"
 vscode "twxs.cmake"
 vscode "vadimcn.vscode-lldb"
 vscode "vknabel.vscode-apple-swift-format"
+vscode "vscodevim.vim"
 vscode "waderyan.gitblame"
 vscode "zhuangtongfa.material-theme"
 vscode "zxh404.vscode-proto3"
