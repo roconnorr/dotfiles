@@ -14,8 +14,6 @@ brew "awscli"
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c"
 # Collection of portable C++ source libraries
 brew "boost"
 # Deduplicating archiver with compression and authenticated encryption
@@ -38,8 +36,6 @@ brew "unbound"
 brew "ncurses"
 # Generic machine emulator and virtualizer
 brew "qemu"
-# Linux virtual machines
-brew "lima"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # GNU File, Shell, and Text utilities
@@ -166,12 +162,10 @@ brew "llm"
 brew "make"
 # Mac App Store command-line interface
 brew "mas"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
-# Intercept, modify, replay, save HTTP/S traffic
-brew "mitmproxy"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Remote terminal application
 brew "mosh"
 # NCurses Disk Usage
@@ -182,8 +176,6 @@ brew "neovim"
 brew "nmap"
 # Prometheus exporter for machine metrics
 brew "node_exporter"
-# Libraries for security-enabled client and server applications
-brew "nss"
 # Modern shell for the GitHub era
 brew "nushell"
 # Development kit for the Java programming language
@@ -206,8 +198,6 @@ brew "python@3.10"
 brew "python@3.8"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-# Develop and deploy code with zero configuration
-brew "railway"
 # Install various Ruby versions and implementations
 brew "ruby-build"
 # Ruby version manager
@@ -238,8 +228,6 @@ brew "swift-format"
 brew "swiftlint"
 # Open source continuous file synchronization application
 brew "syncthing", restart_service: true
-# Easiest, most secure way to use WireGuard and 2FA
-brew "tailscale"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Programmatically correct mistyped console commands
@@ -258,8 +246,12 @@ brew "weechat"
 brew "wget"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp", link: false
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Better and friendly vi(vim) mode plugin for ZSH
+brew "zsh-vi-mode"
 # Tools for building Android applications
 cask "android-studio"
 # Securely stores and accesses AWS credentials in a development environment
@@ -330,6 +322,8 @@ cask "redisinsight"
 cask "shortcat"
 # Team communication and collaboration software
 cask "slack"
+# Video game digital distribution service
+cask "steam"
 # Git client
 cask "sublime-merge"
 # Text editor for code, markup and prose
@@ -340,18 +334,18 @@ cask "time-out"
 cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
+# Desktop Backup Client for Borg
+cask "vorta"
 # Image viewer and file browser
 cask "xee"
-# Video communication and virtual meeting platform
-cask "zoom"
-mas "Charmstone", id: 1563735522
+mas "GarageBand", id: 682658836
 mas "Hand Mirror", id: 1502839586
 mas "Keynote", id: 409183694
+mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Tailscale", id: 1475387142
 mas "TestFlight", id: 899247664
-mas "Transporter", id: 1450874784
 mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
@@ -371,6 +365,7 @@ vscode "graphql.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
 vscode "kamikillerto.vscode-colorize"
 vscode "koichisasada.vscode-rdbg"
+vscode "lencerf.beancount"
 vscode "lokalise.i18n-ally"
 vscode "me-dutour-mathieu.vscode-github-actions"
 vscode "mikestead.dotenv"
