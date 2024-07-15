@@ -1,0 +1,7 @@
+# -- Home Brewfile
+
+# -- casks
+cask "steam"
+
+# -- app store
+mas "GarageBand", id: 682658836

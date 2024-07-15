@@ -1,0 +1,25 @@
+# -- Work Brewfile
+
+# -- brews
+brew "awscli"
+brew "postgresql@15"
+brew "flyctl"
+brew "ruby-build"
+brew "rbenv"
+brew "watchman"
+
+# -- casks
+cask "android-studio"
+cask "aws-vault"
+cask "expo-orbit"
+cask "google-chrome"
+cask "jetbrains-toolbox"
+cask "redisinsight"
+cask "slack"
+cask "time-out"
+cask "postman"
+cask "zoom"
+
+# -- app store
+mas "TestFlight", id: 899247664
+mas "Xcode", id: 497799835
