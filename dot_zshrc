@@ -1,19 +1,18 @@
 path+=("$HOME/.local/bin")
-path+=('/usr/local/opt/php@7.4/bin')
-path+=('/usr/local/opt/php@7.4/sbin')
 path+=("$HOME/.cargo/bin")
-
-path+=('/usr/local/opt/mysql-client/bin')
+path+=("$$HOME/.maestro/bin")
 
 path+=("$HOME/.zshcustom/shellscripts")
 
-# init rbenv
-path+=("$HOME/.rbenv/bin")
-eval "$(rbenv init - zsh)"
+# init rbenv and go if installed
+if  type "rbenv" > /dev/null; then
+    path+=("$HOME/.rbenv/bin")
+    eval "$(rbenv init - zsh)"
+fi
 
-path+=("$(go env GOPATH)/bin")
-
-path+=("$$HOME/.maestro/bin")
+if  type "go" > /dev/null; then
+    path+=("$(go env GOPATH)/bin")
+fi
 
 path+=("$HOME/Library/Android/sdk/platform-tools")
 path+=("$HOME/Library/Android/sdk/emulator")
@@ -25,6 +24,7 @@ export EDITOR=nvim
 export REACT_EDITOR=webstorm
 
 export DOCKER_CLI_HINTS=false
+export HOMEBREW_NO_ANALYTICS=1
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -68,9 +68,9 @@ plugins=(
   docker
   docker-compose
   react-native
-  thefuck
-  zsh-vi-mode
 )
+
+source $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 source $ZSH/oh-my-zsh.sh
 

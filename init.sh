@@ -6,6 +6,7 @@ if ! which -s brew;
 then
     echo "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 else
     echo "Homebrew is already installed."
 fi
@@ -24,16 +25,15 @@ brew install chezmoi
 chezmoi init --apply --verbose https://github.com/roconnorr/dotfiles.git
 
 # install homebrew packages based on machine type
-while true; do
-    read -p "What kind of machine is this? (work|home|base) " opt
-    case $opt in
-        [work]* ) echo "Installing base+work Brewfiles"; cat Brewfile.base Brewfile.work | brew bundle install --file=-; break;;
-        [work]* ) echo "Installing base+home Brewfiles"; cat Brewfile.base Brewfile.home | brew bundle install --file=-; break;;
-        [base]* ) echo "Installing base Brewfile"; brew bundle install --file=Brewfile.base; break;;
-        * ) echo "Invalid option";;
-    esac
-done
+echo "What kind of machine is this? (work|home|base|none) "
+read -r "answer?"
 
+case $answer in
+    [work]* ) echo "Installing base+work Brewfiles"; cat Brewfile.base Brewfile.work | brew bundle install --file=-;;
+    [work]* ) echo "Installing base+home Brewfiles"; cat Brewfile.base Brewfile.home | brew bundle install --file=-;;
+    [base]* ) echo "Installing base Brewfile"; brew bundle install --file=Brewfile.base;;
+    * ) echo "Skipping Brewfile install";;
+esac
 
 # install oh-my-zsh
 OMZDIR=~/.oh-my-zsh
