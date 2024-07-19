@@ -30,7 +30,7 @@ read -r "answer?"
 
 case $answer in
     [work]* ) echo "Installing base+work Brewfiles"; cat Brewfile.base Brewfile.work | brew bundle install --file=-;;
-    [work]* ) echo "Installing base+home Brewfiles"; cat Brewfile.base Brewfile.home | brew bundle install --file=-;;
+    [home]* ) echo "Installing base+home Brewfiles"; cat Brewfile.base Brewfile.home | brew bundle install --file=-;;
     [base]* ) echo "Installing base Brewfile"; brew bundle install --file=Brewfile.base;;
     * ) echo "Skipping Brewfile install";;
 esac

@@ -15,6 +15,7 @@ alias dcrm="docker-compose rm"
 #############################################
 alias nfresh="rm -rf node_modules/ && npm install"
 alias ns="npm start"
+alias nr="npm run "
 alias nis="npm i && npm start"
 alias ys="yarn start"
 alias yis="yarn && yarn start"
@@ -111,4 +112,13 @@ function create-pr() {
 alias batp='bat --plain'
 batdiff() {
     git diff --name-only --diff-filter=d | xargs bat --diff
+}
+
+brewbundle() {
+  case $1 in
+      [work]* ) echo "Installing base+work Brewfiles"; cat Brewfile.base Brewfile.work | brew bundle install --file=-;;
+      [home]* ) echo "Installing base+home Brewfiles"; cat Brewfile.base Brewfile.home | brew bundle install --file=-;;
+      [base]* ) echo "Installing base Brewfile"; brew bundle install --file=Brewfile.base;;
+      * ) echo "Invalid option";;
+  esac
 }

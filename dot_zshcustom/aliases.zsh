@@ -79,6 +79,3 @@ alias mushroom="cat ~/.zshcustom/art/mushroom.txt"
 
 # streams
 alias brainfeeder="streamlink --stdout https://www.twitch.tv/brainfeeder 720p | iina --stdin"
-
-
-alias nr="npm run "
