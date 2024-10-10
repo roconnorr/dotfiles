@@ -103,6 +103,52 @@ function create-pr() {
   branchName=$(git rev-parse --abbrev-ref HEAD) && gh pr create -w -t="$branchName"
 }
 
+function merge-build-pr() {
+    local pr_number
+
+    if [ $# -eq 0 ]; then
+        echo -n "Enter the PR number: "
+        read pr_number
+    else
+        pr_number=$1
+    fi
+
+    if [[ ! $pr_number =~ ^[0-9]+$ ]]; then
+        echo "Invalid PR number. Please enter a valid number."
+        return 1
+    fi
+
+    # Check out the PR
+    if ! gh pr checkout $pr_number; then
+        echo "Failed to check out PR #$pr_number"
+        return 1
+    fi
+
+    # Create an empty commit and push
+    if ! git commit --allow-empty -m "Trigger CI"; then
+        echo "Failed to create empty commit"
+        return 1
+    fi
+
+    if ! git push; then
+        echo "Failed to push the commit"
+        return 1
+    fi
+
+    if ! gh pr review $pr_number --approve; then
+        echo "Failed to approve PR #$pr_number"
+        return 1
+    fi
+
+    if ! gh pr merge $pr_number --auto; then
+        echo "Failed to merge PR #$pr_number"
+        return 1
+    fi
+
+    echo "Successfully triggered CI for PR #$pr_number"
+}
+
+
 #############################################
 #
 # general
