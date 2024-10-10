@@ -39,6 +39,67 @@ alias devmenuandroid='adb shell input keyevent 82'
 alias iosrecord="xcrun simctl io booted recordVideo"
 alias podi="cd ios && pod install && cd .."
 
+# Function for taking a screenshot with adb, appending manufacturer, device name, and timestamp to the filename
+adbscreenshot() {
+  local manufacturer=$(adb shell getprop ro.product.manufacturer | tr -d "[:space:]")
+  local model=$(adb shell getprop ro.product.model | tr -d "[:space:]")
+  local timestamp=$(date +%Y%m%d%H%M%S)
+  local output_file="$HOME/Pictures/Screenshots/screenshot-${manufacturer}-${model}-${timestamp}.png"
+
+  adb exec-out screencap -p > "$output_file"
+}
+
+# Function for recording the screen with adb, appending manufacturer, device name, and timestamp to the filename
+function adbscreenrecord() {
+  local manufacturer=$(adb shell getprop ro.product.manufacturer | tr -d "[:space:]")
+  local model=$(adb shell getprop ro.product.model | tr -d "[:space:]")
+  local timestamp=$(date +%Y%m%d%H%M%S)
+  local output_file="$HOME/Pictures/Screencap/screenrecord-${manufacturer}-${model}-${timestamp}.mp4"
+
+  if ! command -v adb &> /dev/null; then
+      echo "Error: ADB is not installed or not in PATH"
+      return 1
+  fi
+
+  if ! adb devices | grep -q device$; then
+      echo "Error: No Android device connected"
+      return 1
+  fi
+
+  echo "Starting screen recording..."
+  echo "Output file: $output_file"
+  echo "Press Ctrl+C to stop recording"
+
+  # Function to clean up and save recording
+  function cleanup_and_save() {
+      echo "Stopping recording..."
+      adb shell pkill -l SIGINT screenrecord
+      sleep 2
+      adb pull /sdcard/screen_recording.mp4 "$output_file"
+      adb shell rm /sdcard/screen_recording.mp4
+      echo "Screen recording saved to $output_file"
+      trap - SIGINT  # Reset the trap
+  }
+
+  # Set trap for SIGINT (Ctrl+C)
+  trap cleanup_and_save SIGINT
+
+  # Start screen recording without time limit
+  adb shell screenrecord /sdcard/screen_recording.mp4 &
+  local pid=$!
+
+  # Wait for the background process or until interrupted
+  wait $pid
+
+  # Reset the trap
+  trap - SIGINT
+}
+
+# Function for streaming the screen with adb
+adbstream() {
+  adb exec-out screenrecord --output-format=h264 - | ffplay -framerate 60 -probesize 32 -sync video  -
+}
+
 #############################################
 #
 # Vagrant
