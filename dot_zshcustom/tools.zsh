@@ -140,7 +140,7 @@ function merge-build-pr() {
         return 1
     fi
 
-    if ! gh pr merge $pr_number --auto; then
+    if ! gh pr merge $pr_number --auto --delete-branch --squash; then
         echo "Failed to merge PR #$pr_number"
         return 1
     fi
