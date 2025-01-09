@@ -74,6 +74,8 @@ source $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 source $ZSH/oh-my-zsh.sh
 
+export DOCKER_BUILDKIT=1
+
 # Regular bind
 # bindkey '^R' histdb-skim-widget
 # bind when using zsh-vi-mode

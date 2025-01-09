@@ -1,5 +1,4 @@
 {
-  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
   "workbench.colorTheme": "One Dark Pro Darker",
   "editor.minimap.enabled": false,
   "editor.bracketPairColorization.enabled": true,
@@ -9,6 +8,7 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.codeActionsOnSave.mode": "problems",
+  "editor.rulers": [80, 120],
   "files.associations": {
     "dot_zshrc": "shellscript",
     "dot_gitignore_global": "shellscript",
@@ -44,6 +44,12 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
   "files.autoSave": "afterDelay",
   "rubyLsp.enabledFeatures": {
     "codeActions": true,
@@ -63,5 +69,18 @@
     "definition": true,
     "workspaceSymbol": true,
     "references": true
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  },
+  "[swift]": {
+    "editor.defaultFormatter": "vknabel.vscode-apple-swift-format"
+  },
+  "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+  "lldb.launch.expressions": "native",
+  "editor.accessibilitySupport": "off",
+  "xstate.nestTypegenFiles": false,
+  "explorer.fileNesting.patterns": {
+    "Cargo.toml": "Cargo.lock"
   }
 }

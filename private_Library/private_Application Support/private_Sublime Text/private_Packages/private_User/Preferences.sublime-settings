@@ -4,4 +4,5 @@
 	
 	"font_face": "Fira Code",
 	"font_size": 16,
+	"ignored_packages": []
 }
