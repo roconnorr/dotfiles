@@ -12,7 +12,10 @@
     signingkey = "{{ .signingkey }}"
 [gpg]
     program = gpg
-[commit]
-    gpgsign = true
 [init]
     defaultBranch = main
+[commit]
+    gpgsign = true
+[credential]
+    helper = osxkeychain
+
