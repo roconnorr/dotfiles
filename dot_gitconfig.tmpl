@@ -1,21 +1,21 @@
 [core]
-    excludesFile = ~/.gitignore_global
+  excludesFile = ~/.gitignore_global
 [alias]
-    l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    ci = commit
-    co = checkout
-    br = branch
-    last = log -1 HEAD
+  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ci = commit
+  co = checkout
+  br = branch
+  last = log -1 HEAD
 [user]
-    name = "{{ .name }}"
-    email = "{{ .email }}"
-    signingkey = "{{ .signingkey }}"
+  name = "{{ .name }}"
+  email = "{{ .email }}"
+  signingkey = "{{ .signingkey }}"
 [gpg]
-    program = gpg
+  program = gpg
 [init]
-    defaultBranch = main
+  defaultBranch = main
 [commit]
-    gpgsign = true
+  gpgsign = true
 [credential]
-    helper = osxkeychain
+  helper = osxkeychain
 
