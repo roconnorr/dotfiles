@@ -13,8 +13,6 @@ brew "cmatrix"
 brew "cowsay"
 brew "curl"
 brew "deno"
-# Load/unload environment variables based on $PWD
-brew "direnv"
 # Command-line DNS client
 brew "dog"
 # More intuitive version of du in rust

@@ -83,4 +83,3 @@ function zvm_after_init() {
    zvm_bindkey viins '^R' histdb-skim-widget 
 }
 
-eval "$(direnv hook zsh)"
