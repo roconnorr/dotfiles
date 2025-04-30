@@ -76,6 +76,8 @@ alias ytmp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-
 alias shrug="echo '¯\_(ツ)_/¯'"
 alias burnpc="cat ~/.zshcustom/art/burnpc.txt"
 alias mushroom="cat ~/.zshcustom/art/mushroom.txt"
+alias openclipboardurls="pbpaste | openurls"
+
 
 # streams
 alias brainfeeder="streamlink --stdout https://www.twitch.tv/brainfeeder 720p | iina --stdin"

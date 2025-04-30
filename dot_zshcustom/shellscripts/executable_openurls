@@ -1,5 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-while read -r line ; do
-    open -a Firefox "$line"
-done < "$1"
+while read line ; do
+    if [[ "$line" =~ ^https?:// ]]; then
+        open -a Firefox "$line"
+        sleep .5
+    fi
+done
