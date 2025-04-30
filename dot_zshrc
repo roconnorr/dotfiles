@@ -74,6 +74,15 @@ source $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 source $ZSH/oh-my-zsh.sh
 
+# Start the ssh-agent if it’s not running
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s)"
+fi
+# Add your SSH key to the agent if it's not already added
+
+if ! ssh-add -l &>/dev/null; then
+    ssh-add ~/.ssh/id_rsa # change path to your key
+fi
 export DOCKER_BUILDKIT=1
 
 # Regular bind

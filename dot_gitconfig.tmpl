@@ -19,3 +19,11 @@
 [credential]
   helper = osxkeychain
 
+# Directory-specific configurations
+{{- if .gitidentities }}
+{{- range .gitidentities }}
+[includeIf "gitdir:{{ .path }}"]
+  path = ~/.gitconfig-{{ .id }}
+{{- end }}
+{{- end }}
+

@@ -1,0 +1,49 @@
+{{- /* ~/.local/share/chezmoi/.chezmoi.json.tmpl */ -}}
+{{- /* =============================================================================
+Used to customize configuration when doing a `chezmoi init`.
+
+This template file will trigger prompts to fill-in machine-specific
+templateable values. The resulting file is then created at
+`~/.config/chezmoi/chezmoi.json`
+See https://www.chezmoi.io/docs/how-to/
+*/ -}}
+
+{{- $name := promptString "Git name for the default author/committer" }}
+{{- $email := promptString "Git email address for the default author/committer" }}
+{{- $signingkey := promptString "Git commit signing key for the default author/committer" }}
+
+{{- $workName := promptString "Git name for work identity" }}
+{{- $workEmail := promptString "Git email address for work identity" }}
+{{- $workSigningkey := promptString "Git commit signing key for work identity" }}
+
+{{- $personalName := promptString "Git name for personal identity" }}
+{{- $personalEmail := promptString "Git email address for personal identity" }}
+{{- $personalSigningkey := promptString "Git commit signing key for personal identity" }}
+
+{
+  "data": {
+    "email": "{{ $email }}",
+    "name": "{{ $name }}",
+    "signingkey": "{{ $signingkey }}",
+    "gitidentities": [
+      {
+        "id": "work",
+        "path": "~/work/"
+      },
+      {
+        "id": "personal",
+        "path": "~/personal/"
+      }
+    ],
+    "work": {
+      "name": "{{ $workName }}",
+      "email": "{{ $workEmail }}",
+      "signingkey": "{{ $workSigningkey }}"
+    },
+    "personal": {
+      "name": "{{ $personalName }}",
+      "email": "{{ $personalEmail }}",
+      "signingkey": "{{ $personalSigningkey }}"
+    }
+  }
+}
