@@ -2,6 +2,7 @@
 
 # -- casks
 cask "steam"
+cask "godot"
 
 # -- app store
 mas "GarageBand", id: 682658836

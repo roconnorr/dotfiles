@@ -13,8 +13,6 @@ brew "cmatrix"
 brew "cowsay"
 brew "curl"
 brew "deno"
-# Command-line DNS client
-brew "dog"
 # More intuitive version of du in rust
 brew "dust"
 # Modern replacement for 'ls'
@@ -51,7 +49,6 @@ brew "smartmontools"
 brew "sponge"
 brew "streamlink"
 brew "syncthing", restart_service: true
-brew "terraform"
 # Simplified and community-driven man pages
 brew "tldr"
 brew "tmux"
