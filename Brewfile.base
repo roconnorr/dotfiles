@@ -49,8 +49,6 @@ brew "smartmontools"
 brew "sponge"
 brew "streamlink"
 brew "syncthing", restart_service: true
-# Simplified and community-driven man pages
-brew "tldr"
 brew "tmux"
 # Extensible IRC client
 brew "weechat"
