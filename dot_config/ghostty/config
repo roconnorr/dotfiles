@@ -1,0 +1,14 @@
+# Options
+copy-on-select = true
+
+
+# Keybinds
+keybind = super+f=write_screen_file:open
+
+keybind = cmd+alt+left=previous_tab
+keybind = cmd+alt+right=next_tab
+
+keybind = cmd+shift+h=goto_split:left
+keybind = cmd+shift+j=goto_split:down
+keybind = cmd+shift+k=goto_split:up
+keybind = cmd+shift+l=goto_split:right
