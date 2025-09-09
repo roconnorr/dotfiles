@@ -1,6 +1,8 @@
 # Options
-copy-on-select = true
-
+theme = catppuccin-frappe
+copy-on-select = clipboard
+window-save-state = always
+keybind = shift+enter=text:\n
 
 # Keybinds
 keybind = super+f=write_screen_file:open
