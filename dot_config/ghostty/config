@@ -1,5 +1,5 @@
 # Options
-theme = catppuccin-frappe
+theme = Catppuccin Frappe
 copy-on-select = clipboard
 window-save-state = always
 keybind = shift+enter=text:\n
