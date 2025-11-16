@@ -63,7 +63,6 @@ plugins=(
   sublime
   sublime-merge
   zsh-autosuggestions
-  zsh-histdb-skim
   safe-paste
   docker
   docker-compose
@@ -84,11 +83,3 @@ if ! ssh-add -l &>/dev/null; then
     ssh-add ~/.ssh/id_rsa # change path to your key
 fi
 export DOCKER_BUILDKIT=1
-
-# Regular bind
-# bindkey '^R' histdb-skim-widget
-# bind when using zsh-vi-mode
-function zvm_after_init() {
-   zvm_bindkey viins '^R' histdb-skim-widget 
-}
-
