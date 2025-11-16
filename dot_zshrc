@@ -1,21 +1,27 @@
+# ================================================================
+# PATH Configuration
+# ================================================================
 path+=("$HOME/.local/bin")
 path+=("$HOME/.cargo/bin")
-path+=("$$HOME/.maestro/bin")
-
+path+=("$HOME/.maestro/bin")
 path+=("$HOME/.zshcustom/shellscripts")
 
 # init rbenv and go if installed
-if  type "rbenv" > /dev/null; then
+if type "rbenv" > /dev/null; then
     path+=("$HOME/.rbenv/bin")
     eval "$(rbenv init - zsh)"
 fi
 
-if  type "go" > /dev/null; then
+if type "go" > /dev/null; then
     path+=("$(go env GOPATH)/bin")
 fi
 
 path+=("$HOME/Library/Android/sdk/platform-tools")
 path+=("$HOME/Library/Android/sdk/emulator")
+
+# ================================================================
+# Environment Variables
+# ================================================================
 export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_AVD_HOME=~/.android/avd
@@ -24,62 +30,149 @@ export EDITOR=nvim
 export REACT_EDITOR=webstorm
 
 export DOCKER_CLI_HINTS=false
+export DOCKER_BUILDKIT=1
 export HOMEBREW_NO_ANALYTICS=1
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# ================================================================
+# Zinit Installation
+# ================================================================
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
-DEFAULT_USER="$(whoami)"
+if [[ ! -d $ZINIT_HOME ]]; then
+   mkdir -p "$(dirname $ZINIT_HOME)"
+   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
 
-# Uncomment the following line to display red dots whilst waiting for completion.
+source "${ZINIT_HOME}/zinit.zsh"
+
+# ================================================================
+# Theme: Powerlevel10k (much faster than agnoster)
+# ================================================================
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+
+# To configure powerlevel10k, run: p10k configure
+# This will create ~/.p10k.zsh with your preferences
+# For now, using instant prompt for faster startup
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Load p10k configuration if it exists
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# ================================================================
+# Zsh Options & Settings
+# ================================================================
 COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$HOME/.zshcustom
+# ================================================================
+# Plugins - Fast Loading with Turbo Mode
+# ================================================================
 
-# Only source nvm on the first node command
+# Load zsh-vi-mode first (needs to be loaded early)
+if [[ -f "$HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh" ]]; then
+    source "$HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
+fi
+
+# Oh-My-Zsh library components (loaded in turbo mode for speed)
+zinit ice wait lucid
+zinit snippet OMZ::lib/clipboard.zsh
+
+zinit ice wait lucid
+zinit snippet OMZ::lib/completion.zsh
+
+zinit ice wait lucid
+zinit snippet OMZ::lib/git.zsh
+
+zinit ice wait lucid
+zinit snippet OMZ::lib/key-bindings.zsh
+
+# Oh-My-Zsh plugins (turbo loaded)
+zinit ice wait lucid
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+
+zinit ice wait lucid
+zinit snippet OMZ::plugins/macos/macos.plugin.zsh
+
+zinit ice wait lucid
+zinit snippet OMZ::plugins/sublime/sublime.plugin.zsh
+
+zinit ice wait lucid
+zinit snippet OMZ::plugins/sublime-merge/sublime-merge.plugin.zsh
+
+zinit ice wait lucid
+zinit snippet OMZ::plugins/docker/docker.plugin.zsh
+
+zinit ice wait lucid
+zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
+
+zinit ice wait lucid
+zinit snippet OMZ::plugins/react-native/react-native.plugin.zsh
+
+# zsh-autosuggestions (essential - loaded in turbo)
+zinit ice wait lucid atload"_zsh_autosuggest_start"
+zinit light zsh-users/zsh-autosuggestions
+
+# zsh-completions (additional completions)
+zinit ice wait lucid blockf atpull'zinit creinstall -q .'
+zinit light zsh-users/zsh-completions
+
+# Fast syntax highlighting (loaded in turbo)
+zinit ice wait lucid atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay"
+zinit light zdharma-continuum/fast-syntax-highlighting
+
+# ================================================================
+# NVM - Lazy Loading (HUGE speed improvement)
+# ================================================================
+# This defers nvm loading until you actually use node/npm/etc
+export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 export NVM_AUTO_USE=true
-# Extra commands to trigger nvm load
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim' 'just' 'make')
 
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(
-  git
-  zsh-nvm
-  macos
-  sublime
-  sublime-merge
-  zsh-autosuggestions
-  safe-paste
-  docker
-  docker-compose
-  react-native
-)
+# Load zsh-nvm plugin with lazy loading
+zinit ice wait lucid
+zinit light lukechilds/zsh-nvm
 
-source $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# ================================================================
+# History Configuration (via Atuin)
+# ================================================================
+eval "$(atuin init zsh)"
 
-source $ZSH/oh-my-zsh.sh
+# zsh-syntax-highlighting (loaded via homebrew)
+if [ -z "$HOMEBREW_PREFIX" ]; then
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+    source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
 
-# Start the ssh-agent if it’s not running
+# ================================================================
+# SSH Agent Setup
+# ================================================================
+# Start the ssh-agent if it's not running
 if [ -z "$SSH_AUTH_SOCK" ]; then
     eval "$(ssh-agent -s)"
 fi
-# Add your SSH key to the agent if it's not already added
 
+# Add your SSH key to the agent if it's not already added
 if ! ssh-add -l &>/dev/null; then
-    ssh-add ~/.ssh/id_rsa # change path to your key
+    ssh-add ~/.ssh/id_rsa 2>/dev/null # change path to your key
 fi
-export DOCKER_BUILDKIT=1
+
+# ================================================================
+# Custom Configuration Files
+# ================================================================
+# Load all custom configurations from .zshcustom
+ZSH_CUSTOM="$HOME/.zshcustom"
+
+# Source all .zsh files in custom directory
+if [[ -d "$ZSH_CUSTOM" ]]; then
+    for config_file ($ZSH_CUSTOM/*.zsh); do
+        # Skip history.zsh as we've already loaded atuin and syntax highlighting
+        if [[ "$(basename $config_file)" != "history.zsh" ]]; then
+            source "$config_file"
+        fi
+    done
+fi
