@@ -13,7 +13,8 @@
     "dot_zshrc": "shellscript",
     "dot_gitignore_global": "shellscript",
     "dot_gitconfig": "properties",
-    "Brewfile.*": "ruby"
+    "Brewfile.*": "ruby",
+    "*.tsx": "typescriptreact"
   },
   "shellcheck.executablePath": "shellcheck",
   "redhat.telemetry.enabled": false,
@@ -82,5 +83,21 @@
   "xstate.nestTypegenFiles": false,
   "explorer.fileNesting.patterns": {
     "Cargo.toml": "Cargo.lock"
-  }
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "playwright.reuseBrowser": true
 }

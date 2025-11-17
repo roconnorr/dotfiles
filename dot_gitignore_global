@@ -37,3 +37,7 @@ node_modules
 .sass-cache
 .aider*
 
+.build-number
+
+opencode.json
+

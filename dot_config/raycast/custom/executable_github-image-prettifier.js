@@ -33,9 +33,19 @@ exec("pbpaste", (error, stdout, stderr) => {
   const clipboardContent = stdout.trim();
   
   // Extract ALL image URLs using regex - more permissive to catch different URL formats
-  const regex = /!\[(.*?)\]\((https?:\/\/[^\s)]+)\)/g;
-  const matches = [...clipboardContent.matchAll(regex)];
-  
+  const markdownRegex = /!\[(.*?)\]\((https?:\/\/[^\s)]+)\)/g;
+  const htmlRegex = /<img[^>]*\ssrc="(https?:\/\/[^\s"]+)"[^>]*\salt="([^"]*)"[^>]*>/g;
+
+  const markdownMatches = [...clipboardContent.matchAll(markdownRegex)];
+  const htmlMatches = [...clipboardContent.matchAll(htmlRegex)];
+
+  // Combine matches, normalizing the format
+  const matches = [
+    ...markdownMatches,
+    // For HTML matches, swap the positions to match [full match, alt, src]
+    ...htmlMatches.map(match => [match[0], match[2], match[1]])
+  ];
+
   if (matches.length === 0) {
     console.error("No GitHub image URLs found in clipboard");
     process.exit(1);
