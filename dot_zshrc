@@ -1,3 +1,18 @@
+# Uncomment here and at the bottom to enable zprof profiling
+# zmodload zsh/zprof
+
+DISABLE_AUTO_UPDATE="true"
+DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_COMPFIX="true"
+
+# Smarter completion initialization
+autoload -Uz compinit
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    compinit
+else
+    compinit -C
+fi
+
 path+=("$HOME/.local/bin")
 path+=("$HOME/.cargo/bin")
 path+=("$$HOME/.maestro/bin")
@@ -83,3 +98,6 @@ if ! ssh-add -l &>/dev/null; then
     ssh-add ~/.ssh/id_rsa # change path to your key
 fi
 export DOCKER_BUILDKIT=1
+
+
+# zprof
