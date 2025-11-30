@@ -229,3 +229,5 @@ brewbundle() {
       * ) echo "Invalid option";;
   esac
 }
+
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
