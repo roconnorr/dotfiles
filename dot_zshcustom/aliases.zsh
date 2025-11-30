@@ -46,6 +46,14 @@ alias td='echo $(date +%Y-%m-%d)'
 # create a temp shortcut for the current dir
 hashcwd() { hash -d "$1"="$PWD" }
 
+# unlock keychain
+unlock() {
+    read -s "?Enter password: " password
+    echo
+    security unlock-keychain -p "$password" ~/Library/Keychains/login.keychain
+    unset password
+}
+
 ## Command Aliases
 alias x=exit
 alias c=clear
