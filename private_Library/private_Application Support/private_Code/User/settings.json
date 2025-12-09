@@ -34,7 +34,8 @@
     "sss",
     "stylus",
     "xml",
-    "svg"
+    "svg",
+    "json"
   ],
   "[terraform]": {
     "editor.defaultFormatter": "hashicorp.terraform"
