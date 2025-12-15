@@ -40,4 +40,5 @@ node_modules
 .build-number
 
 opencode.json
+.claude/settings.local.json
 
