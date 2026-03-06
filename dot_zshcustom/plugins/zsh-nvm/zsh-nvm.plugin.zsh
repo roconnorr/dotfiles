@@ -108,7 +108,9 @@ _zsh_nvm_lazy_load() {
     # When called, unset all lazy loaders, load nvm then run current command
     eval "$cmd(){
       unset -f $cmds > /dev/null 2>&1
-      _zsh_nvm_load
+      if typeset -f _zsh_nvm_load > /dev/null 2>&1; then
+        _zsh_nvm_load
+      fi
       $cmd \"\$@\"
     }"
   done
