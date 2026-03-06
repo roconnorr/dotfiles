@@ -757,3 +757,10 @@ $env.config = {
         }
     ]
 }
+
+# -----------------------------------------------------
+# Load custom aliases and commands
+# -----------------------------------------------------
+source "~/Library/Application Support/nushell/aliases.nu"
+source "~/Library/Application Support/nushell/commands.nu"
+source "~/Library/Application Support/nushell/dev-tools.nu"
