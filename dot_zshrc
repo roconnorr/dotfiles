@@ -1,10 +1,6 @@
 # Uncomment here and at the bottom to enable zprof profiling
 # zmodload zsh/zprof
 
-DISABLE_AUTO_UPDATE="true"
-DISABLE_MAGIC_FUNCTIONS="true"
-DISABLE_COMPFIX="true"
-
 # Smarter completion initialization
 autoload -Uz compinit
 if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
@@ -41,63 +37,37 @@ export REACT_EDITOR=webstorm
 export DOCKER_CLI_HINTS=false
 export HOMEBREW_NO_ANALYTICS=1
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
-DEFAULT_USER="$(whoami)"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$HOME/.zshcustom
-
 # Only source nvm on the first node command
 export NVM_LAZY_LOAD=true
 export NVM_AUTO_USE=true
 # Extra commands to trigger nvm load
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('just' 'make' 'claude' 'pi' 'opencode')
 
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(
-  git
-  zsh-nvm
-  macos
-  sublime
-  sublime-merge
-  zsh-autosuggestions
-  safe-paste
-  docker
-  docker-compose
-  react-native
-)
+# Source custom config files
+for config_file ($HOME/.zshcustom/*.zsh(N)); do
+  source $config_file
+done
 
+# Source custom plugins
+source $HOME/.zshcustom/plugins/zsh-nvm/zsh-nvm.plugin.zsh
+source $HOME/.zshcustom/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source $HOME/.zshcustom/plugins/sublime-merge/sublime-merge.plugin.zsh
+
+# Homebrew plugins
 source $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-source $ZSH/oh-my-zsh.sh
-
-# Start the ssh-agent if it’s not running
+# Start the ssh-agent if it's not running
 if [ -z "$SSH_AUTH_SOCK" ]; then
     eval "$(ssh-agent -s)"
 fi
 # Add your SSH key to the agent if it's not already added
-
 if ! ssh-add -l &>/dev/null; then
-    ssh-add ~/.ssh/id_rsa # change path to your key
+    ssh-add ~/.ssh/id_rsa
 fi
+
 export DOCKER_BUILDKIT=1
 
+# Prompt
+eval "$(starship init zsh)"
 
 # zprof

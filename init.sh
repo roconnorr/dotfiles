@@ -35,18 +35,6 @@ case $answer in
     * ) echo "Skipping Brewfile install";;
 esac
 
-# install oh-my-zsh
-OMZDIR=~/.oh-my-zsh
-if [ -d "$OMZDIR" ]; then
-    echo "oh-my-zsh is already installed"
-else 
-    echo "oh-my-zsh not installed - installing"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-    # remove template file
-    rm .zshrc.pre-oh-my-zsh
-    chezmoi apply
-fi
-
 # fix shell completion permissions
 compaudit | xargs chmod g-w,o-w
 

@@ -54,6 +54,8 @@ unlock() {
     unset password
 }
 
+alias st='subl'
+
 ## Command Aliases
 alias x=exit
 alias c=clear
