@@ -23,6 +23,7 @@ fi
 echo "init chezmoi"
 brew install chezmoi
 chezmoi init --apply --verbose https://github.com/roconnorr/dotfiles.git
+chezmoi git remote set-url origin git@github.com:roconnorr/dotfiles.git
 
 # install homebrew packages based on machine type
 echo "What kind of machine is this? (work|home|base|none) "
