@@ -60,7 +60,7 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 # Add your SSH key to the agent if it's not already added
 if ! ssh-add -l &>/dev/null; then
-    ssh-add ~/.ssh/id_rsa
+    ssh-add ~/.ssh/id_ed25519
 fi
 
 export DOCKER_BUILDKIT=1
