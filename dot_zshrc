@@ -41,7 +41,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export NVM_LAZY_LOAD=true
 export NVM_AUTO_USE=true
 # Extra commands to trigger nvm load
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('just' 'make' 'claude' 'pi' 'opencode')
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('just' 'make' 'claude' 'pi' 'opencode' 'pnpm')
 
 # Plugins (source before custom config to avoid global alias conflicts)
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
