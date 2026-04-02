@@ -14,7 +14,6 @@ alias dcrm="docker-compose rm"
 #
 #############################################
 alias npm="pnpm "
-alias nfresh="rm -rf node_modules/ && pnpm install"
 alias ns="pnpm start"
 alias nr="pnpm run "
 alias nis="pnpm i && pnpm start"
