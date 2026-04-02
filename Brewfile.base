@@ -1,4 +1,4 @@
-# -- Base Brewfile 
+# -- Base Brewfile
 
 # -- brews
 brew "atuin"
@@ -6,6 +6,7 @@ brew "bash"
 brew "chezmoi"
 brew "curl"
 brew "ffmpeg"
+brew "fnm"
 brew "fzf"
 brew "gh"
 brew "git"
