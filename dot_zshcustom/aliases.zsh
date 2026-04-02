@@ -2,8 +2,8 @@
 # Shell Aliases
 # -----------------------------------------------------
 
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+# Get macOS Software Updates
+alias update='sudo softwareupdate -i -a'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

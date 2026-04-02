@@ -13,12 +13,11 @@ alias dcrm="docker-compose rm"
 # Node
 #
 #############################################
-alias nfresh="rm -rf node_modules/ && npm install"
-alias ns="npm start"
-alias nr="npm run "
-alias nis="npm i && npm start"
-alias ys="yarn start"
-alias yis="yarn && yarn start"
+alias npm="pnpm "
+alias nfresh="rm -rf node_modules/ && pnpm install"
+alias ns="pnpm start"
+alias nr="pnpm run "
+alias nis="pnpm i && pnpm start"
 
 #############################################
 #
