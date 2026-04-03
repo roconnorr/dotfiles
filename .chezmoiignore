@@ -4,3 +4,5 @@ vscode
 iterm
 fonts
 dot_zshcustom/plugins/zsh-histdb-skim/target
+.config/firefox/profiles/default-release/**
+!.config/firefox/profiles/default-release/chrome/userChrome.css
