@@ -1,3 +1,8 @@
 {
   "vim_mode": true,
+  "file_types": {
+    "Ruby": ["**/Brewfile.*"],
+    "Go": ["**/*.tmpl"],
+    "Shell Script": ["**/dot_zshrc"],
+  },
 }
