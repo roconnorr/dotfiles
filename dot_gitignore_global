@@ -1,6 +1,8 @@
 # Node
 npm-debug.log
 
+.pnpm-store
+
 # Mac
 .DS_Store
 
@@ -41,4 +43,3 @@ node_modules
 
 opencode.json
 .claude/settings.local.json
-
