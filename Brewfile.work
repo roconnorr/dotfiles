@@ -6,6 +6,8 @@ brew "postgresql@18"
 brew "ruby-build"
 brew "rbenv"
 brew "watchman"
+brew "age"
+brew "mkcert"
 
 # -- casks
 cask "google-chrome"
