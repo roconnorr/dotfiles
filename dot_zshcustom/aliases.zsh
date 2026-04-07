@@ -2,6 +2,9 @@
 # Shell Aliases
 # -----------------------------------------------------
 
+alias ..="cd .."
+alias ...="cd ../.."
+
 # Get macOS Software Updates
 alias update='sudo softwareupdate -i -a'
 
